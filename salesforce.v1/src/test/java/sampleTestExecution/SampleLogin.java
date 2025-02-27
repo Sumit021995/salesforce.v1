@@ -15,7 +15,6 @@ public class SampleLogin {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		
-		
 		driver.get("http://49.249.28.218:8098/");
 		driver.findElement(By.id("username")).sendKeys("rmgyantra",Keys.TAB,"rmgy@9999",Keys.ENTER);
 		Thread.sleep(2000);
