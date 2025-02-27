@@ -1,4 +1,4 @@
-package testCaseRepo;
+package testScriptRepo;
 
 public class TC_001 {
 
