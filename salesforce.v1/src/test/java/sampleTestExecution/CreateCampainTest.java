@@ -1,6 +1,8 @@
 package sampleTestExecution;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -19,6 +21,12 @@ public class CreateCampainTest {
 		driver.findElement(By.id("username")).sendKeys("rmgyantra",Keys.TAB,"rmgy@9999",Keys.ENTER);
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[text()='Create Campaign']")).click();
+		driver.findElement(By.name("campaignName")).sendKeys("Campaign1",Keys.TAB,"CampaignSatus");
+		driver.findElement(By.name("targetSize")).sendKeys("10");
+		Date d=new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
+		driver.findElement(By.name("expectedCloseDate")).sendKeys();
+		driver.findElement(By.name("targetAudience")).sendKeys("Audience1",Keys.TAB,"Description1",Keys.ENTER);
 		WebElement logoutEle = driver.findElement(By.xpath("//*[name()='svg']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(logoutEle).perform();
