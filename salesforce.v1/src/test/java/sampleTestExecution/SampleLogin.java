@@ -2,6 +2,7 @@ package sampleTestExecution;
 
 import java.time.Duration;
 
+import org.jspecify.annotations.Nullable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +18,9 @@ public class SampleLogin {
 		
 		driver.get("http://49.249.28.218:8098/");
 		driver.findElement(By.id("username")).sendKeys("rmgyantra",Keys.TAB,"rmgy@9999",Keys.ENTER);
+//		WebElement unEle = driver.findElement(By.id("username"));
+//		unEle.sendKeys("rmgyantra",Keys.TAB,"rmgy@9999");
+//		unEle.submit();
 		Thread.sleep(2000);
 		String currentUrl = driver.getCurrentUrl();
 		System.out.println(currentUrl);
