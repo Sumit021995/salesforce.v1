@@ -18,8 +18,7 @@ public class CreateCampainTest {
 		driver.get("http://49.249.28.218:8098/");
 		driver.findElement(By.id("username")).sendKeys("rmgyantra",Keys.TAB,"rmgy@9999",Keys.ENTER);
 		Thread.sleep(2000);
-		
-			System.out.println("Evaluated True");
+		driver.findElement(By.xpath("//span[text()='Create Campaign']")).click();
 		WebElement logoutEle = driver.findElement(By.xpath("//*[name()='svg']"));
 		Actions act = new Actions(driver);
 		act.moveToElement(logoutEle).perform();
