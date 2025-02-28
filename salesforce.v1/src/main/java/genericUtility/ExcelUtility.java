@@ -1,15 +1,9 @@
 package genericUtility;
 
-import java.io.FileInputStream;
-import java.util.Properties;
-
 public class ExcelUtility {
-	public String fetchDataFromPropertiesFile(String key) throws Exception
+	public List<String> fetchMultipleDataFromExcelFile(String sheetName,int row,int cell)
 	{
-		FileInputStream file = new FileInputStream(IPathUtility.propertyFilePath);
-		Properties prop = new Properties();
-		prop.load(file);
-		String value = prop.getProperty(key);
-		return value;
+		
 	}
+	
 }
