@@ -20,8 +20,12 @@ public class Sample {
 		driver.get(URL);
 		LoginPage login = new LoginPage(driver);
 		login.loginToApp(UN, PWD);
+		Thread.sleep(2000);
 		String currentUrl = driver.getCurrentUrl();
+		System.out.println(currentUrl);
 		if(currentUrl.contains("dashboard"))
 			System.out.println("Evaluated True");
+		Thread.sleep(2000);
+		driver.quit();
 	}
 }

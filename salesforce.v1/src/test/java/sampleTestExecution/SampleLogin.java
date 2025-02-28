@@ -26,9 +26,9 @@ public class SampleLogin {
 		System.out.println(currentUrl);
 		if(currentUrl.contains("dashboard"))
 			System.out.println("Evaluated True");
-		WebElement element = driver.findElement(By.xpath("//*[name()='svg']"));
+		WebElement logoutEle = driver.findElement(By.xpath("//*[name()='svg']"));
 		Actions act = new Actions(driver);
-		act.moveToElement(element).perform();
+		act.moveToElement(logoutEle).perform();
 		driver.findElement(By.xpath("//div[@class='dropdown-item logout']")).click();
 		Thread.sleep(2000);
 		driver.quit();
