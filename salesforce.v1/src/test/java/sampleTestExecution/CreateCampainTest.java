@@ -24,7 +24,7 @@ public class CreateCampainTest {
 		SimpleDateFormat dateSdf = new SimpleDateFormat("dd-MM-YYYY");
 		String currentDate = dateSdf.format(Calendar.getInstance().getTime());
 		
-//
+//		Campaign name should be Unique everytime
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[text()='Create Campaign']")).click();
 		driver.findElement(By.name("campaignName")).sendKeys("SumitCampaign"+uniqueStringValue,Keys.TAB,Keys.TAB,"5");
