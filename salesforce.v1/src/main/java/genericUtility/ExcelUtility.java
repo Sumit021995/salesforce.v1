@@ -8,5 +8,8 @@ public class ExcelUtility {
 	{
 		FileInputStream file = new FileInputStream(IPathUtility.propertyFilePath);
 		Properties prop = new Properties();
+		prop.load(file);
+		String value = prop.getProperty(key);
+		return value;
 	}
 }
