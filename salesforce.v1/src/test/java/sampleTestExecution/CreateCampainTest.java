@@ -16,20 +16,28 @@ public class CreateCampainTest {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
 		driver.get("http://49.249.28.218:8098/");
 		driver.findElement(By.id("username")).sendKeys("rmgyantra",Keys.TAB,"rmgy@9999",Keys.ENTER);
+		SimpleDateFormat sdf = new SimpleDateFormat("hh_min_sec");
+//		String newValue = sdf.format(new Date());
+		
+		String campaignName= "SumitCampaign1"+sdf.format(new Date());
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[text()='Create Campaign']")).click();
-		driver.findElement(By.name("campaignName")).sendKeys("Campaign1",Keys.TAB,"CampaignSatus");
-		driver.findElement(By.name("targetSize")).sendKeys("10");
-		Date d=new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
-		driver.findElement(By.name("expectedCloseDate")).sendKeys();
-		driver.findElement(By.name("targetAudience")).sendKeys("Audience1",Keys.TAB,"Description1",Keys.ENTER);
+		driver.findElement(By.name("campaignName")).sendKeys(campaignName,Keys.TAB,Keys.TAB,"5");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[text()='Create Campaign']")).click();
+		Thread.sleep(2000);
+		String expectedAlertText = "Campaign "+campaignName+" Successfully Added";
+		WebElement alertEle = driver.findElement(By.xpath("//div[@role='alert']"));
+		if(alertEle.getText().equals(expectedAlertText))
+			System.out.println("Validated true");
 		WebElement logoutEle = driver.findElement(By.xpath("//*[name()='svg']"));
+		Thread.sleep(2000);
 		Actions act = new Actions(driver);
+		Thread.sleep(2000);
 		act.moveToElement(logoutEle).perform();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@class='dropdown-item logout']")).click();
 		Thread.sleep(2000);
 		driver.quit();
