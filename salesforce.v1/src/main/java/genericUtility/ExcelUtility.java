@@ -21,6 +21,8 @@ public class ExcelUtility {
 		Row row = sheet.getRow(stratRowNum);
 		Cell cell = row.getCell(startCellNum);
 		DataFormatter stringFormatExcelData = new DataFormatter();
+		for(int i=0;i<row.getLastCellNum();i++)
+			for(int j=0;j<)
 		String data = stringFormatExcelData.formatCellValue(cell);
 		excelDataList.add(data);
 				
