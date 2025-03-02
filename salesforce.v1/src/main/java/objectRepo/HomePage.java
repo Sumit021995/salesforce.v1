@@ -12,5 +12,5 @@ public class HomePage {
 	@FindBy(name="officePhone") private WebElement officePhoneTextField; 
 	@FindBy(name="contactName") private WebElement contactNameTextField; 
 	@FindBy(name="mobile") private WebElement mobileTextField; 
-	@FindBy(name="email") private WebElement mobileTextField; 
+	@FindBy(name="email") private WebElement emailTextField; 
 }
