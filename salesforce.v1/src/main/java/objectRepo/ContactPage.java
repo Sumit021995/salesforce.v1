@@ -47,4 +47,7 @@ public class ContactPage {
 		PageFactory.initElements(driver, this);
 	}
 	public void createContact()
+	{
+		
+	}
 }
