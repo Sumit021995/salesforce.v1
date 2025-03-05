@@ -11,6 +11,7 @@ public class LoginPage {
 	@FindBy(id="inputPassword") private WebElement pwdTextField;
 	@FindBy(xpath="//button[@class='btn'") private WebElement loginBtn;
 	@FindBy(linkText="Forgot password?") private WebElement forgotPwdLink;
+	@FindBy(linkText="Create Account") private WebElement createAccountLink;
 
 	public WebElement getUnTextField() {
 		return unTextField;
@@ -20,6 +21,9 @@ public class LoginPage {
 	}
 	public WebElement getLoginBtn() {
 		return loginBtn;
+	}
+	public WebElement getCreateAccountLink() {
+		return createAccountLink;
 	}
 	public WebElement getForgotPwdLink() {
 		return forgotPwdLink;
@@ -32,9 +36,17 @@ public class LoginPage {
 	{
 		getUnTextField().sendKeys(username,Keys.TAB,password,Keys.ENTER);
 	}
-	public void loginToApp(String username ,String password)
+	public void forgotPasswordProcess()
 	{
-		getUnTextField().sendKeys(username,Keys.TAB,password,Keys.ENTER);
+		getForgotPwdLink().click();
+		// to be continued
+		
+	}
+	public void createNewAccount()
+	{
+		getCreateAccountLink().click();
+		// to be continued
+		
 	}
 	
 	
