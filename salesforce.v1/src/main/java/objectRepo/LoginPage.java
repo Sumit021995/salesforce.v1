@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 	@FindBy(id="username") private WebElement unTextField;
+	@FindBy(id="inputPassword") private WebElement pwdTextField;
+	@FindBy(xpath="//button[@class='btn'") private WebElement loginBtn;
 
 	public WebElement getUnTextField() {
 		return unTextField;
