@@ -15,12 +15,13 @@ public class JSONUtility {
         JSONObject json = new JSONObject(content);
         System.out.println("Name: " + json.getString("name"));
     }
-    public void jsonParser() throws IOException, ParseException
+    public void jsonParser(String key) throws IOException, ParseException
     {
     	JSONParser jParser = new JSONParser();
     	FileReader file = new FileReader("Absolute path");
     	Object obj = jParser.parse(file);
     	//convet to JSON Object
     	JSONObject jObj = new JSONObject(obj);
+    	String value = jObj.getString(key);
     }
 }
