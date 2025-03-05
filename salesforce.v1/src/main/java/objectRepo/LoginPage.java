@@ -10,6 +10,7 @@ public class LoginPage {
 	@FindBy(id="username") private WebElement unTextField;
 	@FindBy(id="inputPassword") private WebElement pwdTextField;
 	@FindBy(xpath="//button[@class='btn'") private WebElement loginBtn;
+	@FindBy(linkText="Forgot password?") private WebElement forgotPwdLink;
 
 	public WebElement getUnTextField() {
 		return unTextField;
