@@ -15,9 +15,22 @@ public class LoginPage {
 	public WebElement getUnTextField() {
 		return unTextField;
 	}
+	public WebElement getPwdTextField() {
+		return pwdTextField;
+	}
+	public WebElement getLoginBtn() {
+		return loginBtn;
+	}
+	public WebElement getForgotPwdLink() {
+		return forgotPwdLink;
+	}
 	public LoginPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
+	}
+	public void loginToApp(String username ,String password)
+	{
+		getUnTextField().sendKeys(username,Keys.TAB,password,Keys.ENTER);
 	}
 	public void loginToApp(String username ,String password)
 	{
