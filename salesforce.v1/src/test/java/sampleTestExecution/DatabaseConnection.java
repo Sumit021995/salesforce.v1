@@ -13,7 +13,7 @@ public class DatabaseConnection {
 		
 		Driver driverRef = new Driver();
 		DriverManager.registerDriver(driverRef);
-		Connection conn = DriverManager.getConnection(sqlUrl, username, password);
+		Connection conn = DriverManager.getConnection(sqlUrl, mysqlUN, mysqlPWD);
 		Statement stmt = conn.createStatement();
 		ResultSet resultSet = stmt.executeQuery("query");
 		while(resultSet.next())
