@@ -18,7 +18,7 @@ public class DatabaseConnection {
 		PropertiesUtility pUtil = new PropertiesUtility();
 		String musqlURL = pUtil.fetchValueFromPropertiesFile("mysqlURL");
 		String musqlUN = pUtil.fetchValueFromPropertiesFile("mysqlUN");
-		String musqlURL = pUtil.fetchValueFromPropertiesFile("mysqlPWD");
+		String musqlPWD = pUtil.fetchValueFromPropertiesFile("mysqlPWD");
 		Connection conn = DriverManager.getConnection(musqlURL, mysqlUN, mysqlPWD);
 		Statement stmt = conn.createStatement();
 		ResultSet resultSet = stmt.executeQuery("query");
