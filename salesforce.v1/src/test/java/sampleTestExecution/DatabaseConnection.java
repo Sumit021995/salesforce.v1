@@ -8,12 +8,16 @@ import java.sql.Statement;
 
 import com.mysql.jdbc.Driver;
 
+import genericUtility.PropertiesUtility;
+
 public class DatabaseConnection {
 	public static void main(String[] args) throws SQLException {
 		
 		Driver driverRef = new Driver();
 		DriverManager.registerDriver(driverRef);
-		Connection conn = DriverManager.getConnection(sqlUrl, mysqlUN, mysqlPWD);
+		PropertiesUtility pUtil = new PropertiesUtility();
+		String musqlURL = pUtil.fetchValueFromPropertiesFile("mysqlURL");
+		Connection conn = DriverManager.getConnection(musqlURL, mysqlUN, mysqlPWD);
 		Statement stmt = conn.createStatement();
 		ResultSet resultSet = stmt.executeQuery("query");
 		while(resultSet.next())
