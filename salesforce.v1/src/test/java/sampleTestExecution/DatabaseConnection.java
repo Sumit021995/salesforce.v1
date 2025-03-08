@@ -3,7 +3,6 @@ package sampleTestExecution;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.mysql.jdbc.Driver;
@@ -11,15 +10,15 @@ import com.mysql.jdbc.Driver;
 import genericUtility.PropertiesUtility;
 
 public class DatabaseConnection {
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws Exception {
 		
 		Driver driverRef = new Driver();
 		DriverManager.registerDriver(driverRef);
 		PropertiesUtility pUtil = new PropertiesUtility();
-		String musqlURL = pUtil.fetchValueFromPropertiesFile("mysqlURL");
-		String musqlUN = pUtil.fetchValueFromPropertiesFile("mysqlUN");
-		String musqlPWD = pUtil.fetchValueFromPropertiesFile("mysqlPWD");
-		Connection conn = DriverManager.getConnection(musqlURL, mysqlUN, mysqlPWD);
+		String mysqlURL = pUtil.fetchValueFromPropertiesFile("mysqlURL");
+		String mysqlUN = pUtil.fetchValueFromPropertiesFile("mysqlUN");
+		String mysqlPWD = pUtil.fetchValueFromPropertiesFile("mysqlPWD");
+		Connection conn = DriverManager.getConnection(mysqlURL, mysqlUN, mysqlPWD);
 		Statement stmt = conn.createStatement();
 		ResultSet resultSet = stmt.executeQuery("query");
 		while(resultSet.next())
