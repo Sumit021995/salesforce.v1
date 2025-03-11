@@ -1,10 +1,11 @@
 package genericUtility;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.record.chart.ChartStartBlockRecord;
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
@@ -65,12 +66,30 @@ public class ExcelUtility {
 		}
 		return excelDataList;
 	}
-	public static void main(String[] args) throws Exception {
-		ExcelUtility excelUtility = new ExcelUtility();
-		List<String> data = excelUtility.fetchMultipleDataFromExcelFile("Sheet2", 0);
-		System.out.println(data);
-		List<String> singleColumnData = excelUtility.fetchMultipleDataOfColumnFromExcelFile("Sheet2", 0);
-		System.out.println(singleColumnData);
+	/**
+	 * 
+	 * @param sheetName
+	 * @param rowNum
+	 * @param cellNum
+	 * @return
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 */
+	public String featchDataFromExcelFile(String sheetName , int rowNum , int cellNum) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream file = new FileInputStream(IPathUtility.excelFilePath);
+		Workbook wb = WorkbookFactory.create(file);
+		DataFormatter data = new DataFormatter();
+		Cell cell  = wb.getSheet(sheetName).getRow(rowNum).getCell(cellNum);
+		String value = data.formatCellValue(cell);
+		return value;
 	}
+//	public static void main(String[] args) throws Exception {
+//		ExcelUtility excelUtility = new ExcelUtility();
+//		List<String> data = excelUtility.fetchMultipleDataFromExcelFile("Sheet2", 0);
+//		System.out.println(data);
+//		List<String> singleColumnData = excelUtility.fetchMultipleDataOfColumnFromExcelFile("Sheet2", 0);
+//		System.out.println(singleColumnData);
+//	}
 	
 }
