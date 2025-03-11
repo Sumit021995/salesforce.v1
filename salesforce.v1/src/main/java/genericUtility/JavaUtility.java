@@ -1,14 +1,37 @@
 package genericUtility;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
 
-import org.openqa.selenium.WebDriver;
-
+/**
+ * This is utility class which contains java related generic methods
+ */
 public class JavaUtility {
-	public static String uniqueStringFormatOfTime(WebDriver driver)
+	/**
+	 * This is a generic method to generate random number
+	 * @param bound
+	 * @return
+	 */
+	public  int  generateRandomNumber(int bound)
+	{
+		Random r = new Random();
+		int num = r.nextInt(bound);
+		return num;
+	}
+	/**
+	 * This is a generic method to generate Calendar details 
+	 * @param format
+	 * @return
+	 */
+	public String  getCalanderDetails(String format)
 	{
 		Calendar cal = Calendar.getInstance();
-		return null;
+		Date d = cal.getTime();
+		SimpleDateFormat sdf = new SimpleDateFormat(format);
+		String data = sdf.format(d);
+		return data;
 		
 	}
 }
