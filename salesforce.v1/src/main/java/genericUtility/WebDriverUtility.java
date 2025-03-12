@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 public class WebDriverUtility {
 	/**
 	 * This is a generic method to 
@@ -27,7 +28,7 @@ public class WebDriverUtility {
 	 * @param element
 	 * @param second
 	 */
-	public void waitForElementToBeClicable(WebDriver driver,WebElement element,long second)
+	public void waitForElementToBeClickable(WebDriver driver,WebElement element,long second)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(second));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
