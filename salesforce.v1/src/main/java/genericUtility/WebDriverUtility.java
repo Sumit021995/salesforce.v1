@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -56,5 +57,67 @@ public class WebDriverUtility {
 				break;
 		}
 		
+	}
+	/**
+	 * 
+	 * @param driver
+	 * @param frameIndex
+	 */
+	public void switchToFrame(WebDriver driver , int frameIndex)
+	{
+		driver.switchTo().frame(frameIndex);
+	}
+	/**
+	 * 
+	 * @param driver
+	 * @param frameEle
+	 */
+	public void switchToFrame(WebDriver driver , WebElement frameEle)
+	{
+		driver.switchTo().frame(frameEle);
+	}
+	/**
+	 * 
+	 * @param driver
+	 * @param nameId
+	 */
+	public void switchToFrame(WebDriver driver , String nameId)
+	{
+		driver.switchTo().frame(nameId);
+	}
+	/**
+	 * 
+	 * @param element
+	 * @param index
+	 */
+	public void select(WebElement element,int index)
+	{
+		Select select = new Select(element);
+		select.selectByIndex(index);
+	}
+	public void select(WebElement element,String value)
+	{
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+	public void select(String visibleText , WebElement element)
+	{
+		Select select = new Select(element);
+		select.selectByVisibleText(visibleText);
+	}
+	public void deselect(WebElement element,int index)
+	{
+		Select select = new Select(element);
+		select.deselectByIndex(index);
+	}
+	public void deselect(WebElement element,String value)
+	{
+		Select select = new Select(element);
+		select.deselectByValue(value);
+	}
+	public void deselect(String visibleText , WebElement element)
+	{
+		Select select = new Select(element);
+		select.deselectByVisibleText(visibleText);
 	}
 }
