@@ -8,10 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
+/**
+ * This is an Utility class which contains generic methods for selenium library
+ * @author-Sumit
+ * @version-01.10.25
+ */
 public class WebDriverUtility {
+	
+	
 	/**
-	 * This is a generic method to 
+	 * This is a generic method 
 	 * @param driver
 	 * @param element
 	 * @param second
