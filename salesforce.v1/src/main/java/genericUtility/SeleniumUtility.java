@@ -54,7 +54,7 @@ public class SeleniumUtility {
 	 * @param dropDownElement
 	 * @param index
 	 */
-	public void selectOptionUsinIndex(WebElement dropDownElement, int index)
+	public void selectOptionUsingIndex(WebElement dropDownElement, int index)
 	{
 		Select s = new Select(dropDownElement);
 		s.selectByIndex(index);
@@ -64,7 +64,7 @@ public class SeleniumUtility {
 	 * @param dropDownElement
 	 * @param attributeValue
 	 */
-	public void selectOptionUsinValue(WebElement dropDownElement, String attributeValue)
+	public void selectOptionUsingValue(WebElement dropDownElement, String attributeValue)
 	{
 		Select s = new Select(dropDownElement);
 		s.selectByValue(attributeValue);
@@ -74,7 +74,7 @@ public class SeleniumUtility {
 	 * @param dropDownElement
 	 * @param visibleText
 	 */
-	public void selectOptionUsinVisibleText(WebElement dropDownElement, String visibleText)
+	public void selectOptionUsingVisibleText(WebElement dropDownElement, String visibleText)
 	{
 		Select s = new Select(dropDownElement);
 		s.selectByVisibleText(visibleText);
