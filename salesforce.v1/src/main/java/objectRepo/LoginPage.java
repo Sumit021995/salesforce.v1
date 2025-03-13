@@ -48,6 +48,10 @@ public class LoginPage {
 		// to be continued
 		
 	}
+	public void loginToApplication(WebDriver driver)
+	{
+		
+	}
 	
 	
 }
