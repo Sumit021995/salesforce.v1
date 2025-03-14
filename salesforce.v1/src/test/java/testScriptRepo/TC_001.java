@@ -1,5 +1,7 @@
 package testScriptRepo;
 
-public class TC_001 {
+import genericUtility.BaseClass;
 
+public class TC_001 extends BaseClass {
+	
 }
