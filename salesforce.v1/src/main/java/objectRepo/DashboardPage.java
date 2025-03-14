@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DashboardPage {
+	WebDriver driver;
 	@FindBy(linkText="Campaigns") private WebElement campaignsLink;
 	@FindBy(linkText="Contacts") private WebElement contactLink;
 	@FindBy(linkText="Leads") private WebElement leadsLink;
