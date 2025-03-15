@@ -1,5 +1,6 @@
 package objectRepo;
 
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +15,7 @@ public class CreateCampaignPage {
 	@FindBy(name="description") private WebElement descriptionTextArea;
 	@FindBy(name="targetSize") private WebElement targetSizeTextField;
 	@FindBy(xpath="//button[text()='Create Campaign']") private WebElement createCampaignBtn;
+	@FindBy(xpath="//div[@class='Toastify__toast-body']") private WebElement createCampaignConfirmationMsg;
 	public WebElement getCampaignNameTextField() {
 		return campaignNameTextField;
 	}
@@ -22,6 +24,9 @@ public class CreateCampaignPage {
 	}
 	public WebElement getCreateCampaignBtn() {
 		return createCampaignBtn;
+	}
+	public WebElement getCreateCampaignConfirmationMsg() {
+		return createCampaignConfirmationMsg;
 	}
 	public WebElement getTargetAudienceTextField() {
 		return targetAudienceTextField;
@@ -41,10 +46,16 @@ public class CreateCampaignPage {
 		
 		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB,Keys.TAB,targetSize);
 		getCreateCampaignBtn().click();
+		
 	}
 	public void createCampaign(String campaignName , String campusStatus , String targetSize)
 	{
 		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB ,campusStatus ,Keys.TAB,targetSize);
+		getCreateCampaignBtn().click();
+	}
+	public void createCampaign(String campaignName , String campusStatus , String targetSize , String date)
+	{
+		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB ,campusStatus ,Keys.TAB,targetSize,Keys.TAB,);
 		getCreateCampaignBtn().click();
 	}
 }
