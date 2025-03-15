@@ -42,7 +42,6 @@ public class CreateCampaignPage {
 	}
 	public void createCampaign(String campaignName , String targetSize)
 	{
-		
 		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB,Keys.TAB,targetSize);
 		getCreateCampaignBtn().click();
 		
