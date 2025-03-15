@@ -34,4 +34,20 @@ public class JavaUtility {
 		return data;
 		
 	}
+	/**
+	 * 
+	 * @param format
+	 * @param extraDay
+	 * @return
+	 */
+	public String  getCalanderDetails(String format,int extraDay)
+	{
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DAY_OF_MONTH, extraDay);
+		Date d = cal.getTime();
+		SimpleDateFormat sdf = new SimpleDateFormat(format);
+		String data = sdf.format(d);
+		return data;
+		
+	}
 }
