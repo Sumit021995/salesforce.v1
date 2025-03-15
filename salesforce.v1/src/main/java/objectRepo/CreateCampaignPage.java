@@ -1,11 +1,10 @@
 package objectRepo;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import genericUtility.ExcelUtility;
 
 public class CreateCampaignPage {
 	
@@ -20,6 +19,9 @@ public class CreateCampaignPage {
 	}
 	public WebElement getCampaignStatusTextField() {
 		return campaignStatusTextField;
+	}
+	public WebElement getCreateCampaignBtn() {
+		return createCampaignBtn;
 	}
 	public WebElement getTargetAudienceTextField() {
 		return targetAudienceTextField;
@@ -37,6 +39,12 @@ public class CreateCampaignPage {
 	public void createCampaign(String campaignName , String targetSize)
 	{
 		
-		getCampaignNameTextField().sendKeys();
+		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB,Keys.TAB,targetSize);
+		getCreateCampaignBtn().click();
+	}
+	public void createCampaign(String campaignName , String campusStatus , String targetSize)
+	{
+		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB ,campusStatus ,Keys.TAB,targetSize);
+		getCreateCampaignBtn().click();
 	}
 }
