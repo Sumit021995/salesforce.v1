@@ -55,7 +55,7 @@ public class CreateCampaignPage {
 	}
 	public void createCampaign(String campaignName , String campusStatus , String targetSize , String date)
 	{
-		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB ,campusStatus ,Keys.TAB,targetSize,Keys.TAB,);
+		getCampaignNameTextField().sendKeys(campaignName,Keys.TAB ,campusStatus ,Keys.TAB,targetSize,Keys.TAB,date);
 		getCreateCampaignBtn().click();
 	}
 }
