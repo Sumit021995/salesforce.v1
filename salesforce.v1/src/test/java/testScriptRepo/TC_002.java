@@ -21,7 +21,8 @@ public class TC_002 extends BaseClass {
 		JavaUtility jUtil = new JavaUtility();
 		int randomNumber = jUtil.generateRandomNumber(1000);
 		int randomNumber2 = jUtil.generateRandomNumber(100);
-		ccPage.createCampaign("Campaign0211"+randomNumber,"This is campaign Status "+randomNumber ,""+randomNumber2,);
+		String calanderDetails = jUtil.getCalanderDetails("dd-MM-YYYY", randomNumber2);
+		ccPage.createCampaign("Campaign0211"+randomNumber,"This is campaign Status "+randomNumber ,""+randomNumber2,calanderDetails);
 		Assert.assertEquals((ccPage.getCreateCampaignConfirmationMsg().getText()).contains("Campaign0211"+randomNumber), true);
 		Reporter.log("Validated True",true);
 	}
