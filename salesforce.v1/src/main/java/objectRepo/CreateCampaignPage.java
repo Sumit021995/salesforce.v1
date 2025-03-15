@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericUtility.ExcelUtility;
+
 public class CreateCampaignPage {
 	
 	@FindBy(name="campaignName") private WebElement campaignNameTextField;
@@ -12,6 +14,7 @@ public class CreateCampaignPage {
 	@FindBy(name="targetAudience") private WebElement targetAudienceTextField;
 	@FindBy(name="description") private WebElement descriptionTextArea;
 	@FindBy(name="targetSize") private WebElement targetSizeTextField;
+	@FindBy(xpath="//button[text()='Create Campaign']") private WebElement createCampaignBtn;
 	public WebElement getCampaignNameTextField() {
 		return campaignNameTextField;
 	}
@@ -30,5 +33,10 @@ public class CreateCampaignPage {
 	public CreateCampaignPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		
+	}
+	public void createCampaign(String campaignName , String targetSize)
+	{
+		
+		getCampaignNameTextField().sendKeys();
 	}
 }
