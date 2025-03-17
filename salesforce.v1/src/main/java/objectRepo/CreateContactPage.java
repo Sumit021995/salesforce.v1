@@ -13,6 +13,12 @@ public class CreateContactPage {
 	@FindBy(name="contactName") private WebElement contactNameTextField; 
 	@FindBy(name="mobile") private WebElement mobileTextField; 
 	@FindBy(name="email") private WebElement emailTextField;
+	@FindBy(xpath="//span[text()='Create Contact']") private WebElement createContactBtn; 
+	
+	public WebElement getCreateContactBtn() {
+		return createContactBtn;
+	}
+	
 	public WebElement getOrganizationTextField() {
 		return organizationTextField;
 	}
