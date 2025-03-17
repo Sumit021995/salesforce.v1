@@ -9,7 +9,6 @@ public class ContactPage {
 	
 	@FindBy(xpath="//span[text()='Create Contact']") private WebElement createContactPlusBtn; 
 	
-	
 	public WebElement getCreateContactPlusBtn() {
 		return createContactPlusBtn;
 	}
