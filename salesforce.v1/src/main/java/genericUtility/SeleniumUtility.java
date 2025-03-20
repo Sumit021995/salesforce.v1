@@ -10,9 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
-
-import com.google.common.io.Files;
 
 /**
  * This is an Utility class which contains generic methods for selenium library
@@ -200,7 +199,7 @@ public class SeleniumUtility {
 		TakesScreenshot ts= (TakesScreenshot)driver;
 		File file = ts.getScreenshotAs(OutputType.FILE);
 		File location= new File(".\\Screenshot\\image-"+dateTimeStamp+".png");
-		Files.copy(file, location);
+		FileHandler.copy(file, location);
 		return location.getAbsolutePath(); // used in Listeners
 
 	}

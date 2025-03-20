@@ -17,7 +17,7 @@ public class TC_003 extends BaseClass{
 		new ContactPage(driver).clickOnCreateContactBtn();
 		
 		JavaUtility jUtil = new JavaUtility();
-		int randomNumber = jUtil.generateRandomNumber(10);
+		int randomNumber = jUtil.generateRandomNumber(100)+10;
 		CreateContactPage ccPage = new CreateContactPage(driver);
 		ccPage.createContactWithMandatoryFields(driver,"abc", "title"+randomNumber, "Sumit", "9818425197", "selectCampaign.html", "Campaign0211", "create-contact");
 	}
