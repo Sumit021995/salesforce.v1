@@ -10,7 +10,7 @@ import objectRepo.DashboardPage;
 
 public class TC_003 extends BaseClass{
 	@Test 
-	public void createContact() throws Exception
+	public void createContact_001() throws Exception
 	{
 		DashboardPage dbPage = new DashboardPage(driver);
 		dbPage.getContactLink().click();
