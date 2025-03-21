@@ -22,7 +22,9 @@ public class ListenersImplementation implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		Reporter.log("✅ "+ methodName+" Test Started Successfully ",true);
-		test = 
+		
+		// Adding test method to ExtentReports
+		test = report.createTest(methodName);
 	}
 
 	@Override
