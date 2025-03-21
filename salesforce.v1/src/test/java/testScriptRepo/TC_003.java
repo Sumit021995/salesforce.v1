@@ -12,6 +12,7 @@ public class TC_003 extends BaseClass{
 	@Test (groups= {"Smoke"})
 	public void createContact_001() throws Exception
 	{
+		System.out.println("Test Exceution Started");
 		DashboardPage dbPage = new DashboardPage(driver);
 		dbPage.getContactLink().click();
 		new ContactPage(driver).clickOnCreateContactBtn();
