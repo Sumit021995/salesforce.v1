@@ -22,6 +22,7 @@ public class ListenersImplementation implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		Reporter.log("✅ "+ methodName+" Test Started Successfully ",true);
+		test = 
 	}
 
 	@Override
@@ -36,7 +37,9 @@ public class ListenersImplementation implements ITestListener {
 		Reporter.log("❌ "+ methodName+" Test Executecution Failed... ",true);
 		Reporter.log("⚠️ in process to take Screenshot...",true);
 		try {
-			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
+//			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
+			String path = new SeleniumUtility().getWebPageScreenshotFromBase64(BaseClass.sDriver, dateTimeStamp);
+			test.addScreenCaptureFromBase64String(path);
 			
 			
 		} catch (IOException e) {
@@ -67,7 +70,7 @@ public class ListenersImplementation implements ITestListener {
 	@Override
 	public void onStart(ITestContext context) {
 		
-		Reporter.log("Test Start Executed",true);
+		Reporter.log("ON Start Executed",true);
 		// Configuration of Extent Report 
 		ExtentSparkReporter reporter = new ExtentSparkReporter(".//ExtentReport//report"+dateTimeStamp+".html");
 		reporter.config().setDocumentTitle("NinzaCrm_Report");
@@ -79,7 +82,7 @@ public class ListenersImplementation implements ITestListener {
 		report.attachReporter(reporter);
 		report.setSystemInfo("Base OS", "Windows 10");
 		report.setSystemInfo("Base URL", "http://49.249.28.218:8098/");
-		report.setSystemInfo("Base OS", "Windows 10");
+		report.setSystemInfo("Default Browser", "Chrome");
 		report.setSystemInfo("Reporter", "Sumit");
 		
 	}
@@ -87,6 +90,7 @@ public class ListenersImplementation implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		Reporter.log(" On Test Finish Executed",true);
+		
 		
 	}
 
