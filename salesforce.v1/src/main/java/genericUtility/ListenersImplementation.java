@@ -9,13 +9,14 @@ import org.testng.Reporter;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ListenersImplementation implements ITestListener {
+	
 	ExtentTest test;
 	ExtentReports  report;
-
 	String dateTimeStamp = new JavaUtility().getCalanderDetails("YYYYMMdd_hhmmss");
 
 	@Override
@@ -31,6 +32,9 @@ public class ListenersImplementation implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		Reporter.log("✅ "+ methodName+" Test Executed Successfully ",true);
+		
+		// Success status logging
+		test.log(Status.PASS, "✅ "+methodName+" is Passed");
 	}
 
 	@Override
@@ -38,12 +42,16 @@ public class ListenersImplementation implements ITestListener {
 		String methodName = result.getMethod().getMethodName();
 		Reporter.log("❌ "+ methodName+" Test Executecution Failed... ",true);
 		Reporter.log("⚠️ in process to take Screenshot...",true);
+		// Fail status logging
+		test.log(Status.FAIL, "❌  "+methodName+" is Failed");
+		// Info logging
+		test.log(Status.INFO, result.getThrowable().getMessage());
+		
 		try {
-//			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
-			String path = new SeleniumUtility().getWebPageScreenshotFromBase64(BaseClass.sDriver, dateTimeStamp);
+			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
+//			String path = new SeleniumUtility().getWebPageScreenshotFromBase64(BaseClass.sDriver);
 			test.addScreenCaptureFromBase64String(path);
-			
-			
+	
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -54,6 +62,8 @@ public class ListenersImplementation implements ITestListener {
 	public void onTestSkipped(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		Reporter.log(methodName+" Test Skipped...",true);
+		// Skip Status logging
+		test.log(Status.SKIP, "⚠️ "+methodName+" Test Skipped");
 		
 	}
 
@@ -92,7 +102,7 @@ public class ListenersImplementation implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		Reporter.log(" On Test Finish Executed",true);
-		
+		report.flush();
 		
 	}
 
