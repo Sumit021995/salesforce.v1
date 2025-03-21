@@ -9,7 +9,7 @@ import objectRepo.CreateContactPage;
 import objectRepo.DashboardPage;
 
 public class TC_003 extends BaseClass{
-	@Test 
+	@Test (groups= {"Smoke"})
 	public void createContact_001() throws Exception
 	{
 		DashboardPage dbPage = new DashboardPage(driver);
@@ -20,5 +20,6 @@ public class TC_003 extends BaseClass{
 		int randomNumber = jUtil.generateRandomNumber(100)+10;
 		CreateContactPage ccPage = new CreateContactPage(driver);
 		ccPage.createContactWithMandatoryFields(driver,"abc", "title"+randomNumber, "Sumit", "9818425197", "selectCampaign.html", "Campaign0211", "create-contact");
+		System.out.println("✅ Test Exceution Ended Successfully");
 	}
 }
