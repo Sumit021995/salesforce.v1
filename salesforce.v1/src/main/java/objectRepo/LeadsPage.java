@@ -9,8 +9,13 @@ public class LeadsPage {
 	@FindBy(xpath="//span[text()='Create Lead']") private WebElement createLeadBtn;
 	@FindBy(xpath="//select[@class='form-control']") private WebElement searchByLeadIdDropdown;
 	@FindBy(xpath="//input[@class='form-control' and @placeholder='Search by Lead Id']") private WebElement searchByLeadIdTestField;
+	@FindBy(xpath="//div[@class='Toastify__toast-body']") private WebElement createdLeadsConfirmationMsg;
+	
 	public WebElement getCreateLeadBtn() {
 		return createLeadBtn;
+	}
+	public WebElement getCreatedLeadsConfirmationMsg() {
+		return createdLeadsConfirmationMsg;
 	}
 	public WebElement getSearchByLeadIdDropdown() {
 		return searchByLeadIdDropdown;
