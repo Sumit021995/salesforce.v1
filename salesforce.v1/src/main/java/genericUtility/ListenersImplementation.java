@@ -7,9 +7,16 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-public class ListenersImplementation implements ITestListener {
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
-	String calanderDetails = new JavaUtility().getCalanderDetails("YYYYMMdd_hhmmss");
+public class ListenersImplementation implements ITestListener {
+	ExtentTest test;
+	ExtentReports  report;
+
+	String dateTimeStamp = new JavaUtility().getCalanderDetails("YYYYMMdd_hhmmss");
 
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -29,7 +36,8 @@ public class ListenersImplementation implements ITestListener {
 		Reporter.log("❌ "+ methodName+" Test Executecution Failed... ",true);
 		Reporter.log("⚠️ in process to take Screenshot...",true);
 		try {
-			new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, calanderDetails);
+			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
+			
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -60,6 +68,19 @@ public class ListenersImplementation implements ITestListener {
 	public void onStart(ITestContext context) {
 		
 		Reporter.log("Test Start Executed",true);
+		// Configuration of Extent Report 
+		ExtentSparkReporter reporter = new ExtentSparkReporter(".//ExtentReport//report"+dateTimeStamp+".html");
+		reporter.config().setDocumentTitle("NinzaCrm_Report");
+		reporter.config().setReportName("NinzaCrm_ExtentsReport");
+		reporter.config().setTheme(Theme.DARK);
+		
+		// Create an empty report with configuration 
+		report = new ExtentReports();
+		report.attachReporter(reporter);
+		report.setSystemInfo("Base OS", "Windows 10");
+		report.setSystemInfo("Base URL", "http://49.249.28.218:8098/");
+		report.setSystemInfo("Base OS", "Windows 10");
+		report.setSystemInfo("Reporter", "Sumit");
 		
 	}
 
