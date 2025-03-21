@@ -2,6 +2,7 @@ package testScriptRepo;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import genericUtility.BaseClass;
@@ -10,6 +11,7 @@ import objectRepo.CreateProductPage;
 import objectRepo.DashboardPage;
 import objectRepo.ProductPage;
 
+@Listeners(genericUtility.ListenersImplementation.class)
 public class TC_004 extends BaseClass {
 	@Test(groups= {"Regression"})
 	public void createProduct() throws Exception
