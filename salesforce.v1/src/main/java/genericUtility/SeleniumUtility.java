@@ -198,10 +198,24 @@ public class SeleniumUtility {
 	{
 		TakesScreenshot ts= (TakesScreenshot)driver;
 		File file = ts.getScreenshotAs(OutputType.FILE);
-		File location= new File(".\\Screenshot\\image-"+dateTimeStamp+".png");
+		File location= new File(".\\Screenshot\\bugScreenshot-"+dateTimeStamp+".png");
 		FileHandler.copy(file, location);
 		return location.getAbsolutePath(); // used in Listeners
 
+	}
+	/**
+	 * 
+	 * @param driver
+	 * @param dateTimeStamp
+	 * @return
+	 * @throws IOException
+	 */
+	public String getWebPageScreenshotFromBase64(WebDriver driver,String dateTimeStamp) throws IOException
+	{
+		TakesScreenshot ts= (TakesScreenshot)driver;
+		String path = ts.getScreenshotAs(OutputType.BASE64);
+		return path; // used in Listeners
+		
 	}
 	////////////******Handling Window*******/////////////
 	
