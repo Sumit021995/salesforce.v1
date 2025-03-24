@@ -3,6 +3,7 @@ package testScriptRepo;
 import java.util.HashMap;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -38,22 +39,23 @@ public class TC_003 extends BaseClass{
 		ccPage.getFirstCampaignSelectBtn().click();
 		wdUtil.switchToWindow(driver, parentUrl);
 		ccPage.getCreateContactBtn().click();
+		jUtil.waitFromThread(1000);
 		String confirmationMsg = new ContactPage(driver).getCreateContactConfirmationMsg().getText();
-		System.out.println(confirmationMsg);
-//		Assert.assertTrue(confirmationMsg.contains("Sumit_Saurav_Data"));
-		System.out.println("✅ Test Exceution Ended Successfully");
+//		System.out.println(confirmationMsg);
+		Assert.assertTrue(confirmationMsg.contains("Sumit_Saurav_Data"),"Validation Failed ");
+		Reporter.log("✅ Test Exceution Ended Successfully",true);
 	}
 	
 	@DataProvider(name="createContactData")
 	public Object[][] provideCreateContactData()
 	{
 		HashMap<String, String> data1 = new HashMap<String,String>();
-		data1.put("org", "QualiMe_Data1");
+		data1.put("org", "QualiMe_YT_Data1");
 		data1.put("title", "Title_Data1");
 		data1.put("contactName", "Sumit_Saurav_Data1");
 		data1.put("mobile", "9818425197_Data1");
 		HashMap<String, String> data2 = new HashMap<String,String>();
-		data2.put("org", "QualiMe_Data2");
+		data2.put("org", "QualiMe__YT_Data2");
 		data2.put("title", "Title_Data2");
 		data2.put("contactName", "Sumit_Saurav_Data2");
 		data2.put("mobile", "9818425197_Data2");
