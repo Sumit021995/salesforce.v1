@@ -3,10 +3,10 @@
 <suite name="Suite">
   <test thread-count="4" name="Test">
     <classes>
-      <class name="testScriptRepo.TC_004"/>
-      <class name="testScriptRepo.TC_003"/>
-      <class name="testScriptRepo.TC_001"/>
-      <class name="testScriptRepo.TC_002"/>
+      <class name="testScriptRepo.Test_004"/>
+      <class name="testScriptRepo.Test_003"/>
+      <class name="testScriptRepo.Test_001"/>
+      <class name="testScriptRepo.Test_002"/>
      
     </classes>
   </test> <!-- Test -->

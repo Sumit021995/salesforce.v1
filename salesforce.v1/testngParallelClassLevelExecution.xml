@@ -3,8 +3,8 @@
 <suite thread-count="2" parallel="classes" name="Suite">
   <test thread-count="2" name="Test">
     <classes>
-      <class name="testScriptRepo.TC_004"/>
-      <class name="testScriptRepo.TC_002"/>
+      <class name="testScriptRepo.Test_004"/>
+      <class name="testScriptRepo.Test_002"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

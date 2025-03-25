@@ -6,8 +6,8 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testScriptRepo.TC_003"/>
-      <class name="testScriptRepo.TC_001"/>
+      <class name="testScriptRepo.Test_003"/>
+      <class name="testScriptRepo.Test_001"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
