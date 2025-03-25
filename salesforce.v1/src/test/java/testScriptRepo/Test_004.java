@@ -14,7 +14,7 @@ import objectRepo.DashboardPage;
 import objectRepo.ProductPage;
 
 @Listeners(genericUtility.ListenersImplementation.class)
-public class TC_004 extends BaseClass {
+public class Test_004 extends BaseClass {
 	@Test(groups= {"Regression"}, retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class)
 	public void createProduct() throws Exception
 	{

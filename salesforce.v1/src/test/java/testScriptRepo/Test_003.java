@@ -16,7 +16,7 @@ import objectRepo.CreateContactPage;
 import objectRepo.DashboardPage;
 @Listeners(genericUtility.ListenersImplementation.class)
 
-public class TC_003 extends BaseClass{
+public class Test_003 extends BaseClass{
 	
 //	@DataProvider(sampleTestExecution.DataProviderLoginExample.class)
 	@Test (groups= {"Smoke"}, retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class,dataProvider = "createContactData")
