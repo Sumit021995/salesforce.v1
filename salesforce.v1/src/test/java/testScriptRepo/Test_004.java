@@ -24,6 +24,7 @@ public class Test_004 extends BaseClass {
 		CreateProductPage cpPage = new CreateProductPage(driver);
 		cpPage.createProductWithMandatoryFields("Drone"+randomNumber,"Electronics",2,1500,4);
 		new JavaUtility().waitFromThread(2000);
+//		Assert.fail();
 		String confirmationMsg = new ProductPage(driver).getCreateProductConfirmationMsg().getText();
 		System.out.println(confirmationMsg);
 		Assert.assertEquals(confirmationMsg.contains("Drone"+randomNumber),true);
