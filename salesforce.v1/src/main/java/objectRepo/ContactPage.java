@@ -8,7 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 public class ContactPage {
 	
 	@FindBy(xpath="//span[text()='Create Contact']") private WebElement createContactPlusBtn; 
+	@FindBy(xpath="//div[@class='Toastify__toast-body']") private WebElement createContactConfirmationMsg; 
 	
+	public WebElement getCreateContactConfirmationMsg() {
+		return createContactConfirmationMsg;
+	}
 	public WebElement getCreateContactPlusBtn() {
 		return createContactPlusBtn;
 	}

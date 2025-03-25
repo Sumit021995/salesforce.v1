@@ -16,11 +16,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import genericUtility.WebDriverUtility;
+
 public class CreateContactSample {
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		WebDriverUtility wUtility = new WebDriverUtility();
 		driver.get("http://49.249.28.218:8098/");
 		driver.findElement(By.id("username")).sendKeys("rmgyantra",Keys.TAB,"rmgy@9999",Keys.ENTER);
 		SimpleDateFormat sdf = new SimpleDateFormat("hh_mm_ss");

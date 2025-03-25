@@ -33,19 +33,5 @@ public class DataProviderLoginExample {
 		driver.quit();
 	}
 	
-	@DataProvider(name="createContact")
-	public Object[][] provideCreateContactData()
-	{
-		HashMap<String, String> data1 = new HashMap<String,String>();
-		data1.put("org", null);
-		data1.put("title", null);
-		data1.put("contactName", null);
-		data1.put("mobile", null);
-		data1.put("childUrl", null);
-		Object[][] arr = {
-				{"sumitofficial021995@gmail.com","Infocus4999@"},
-				{"infocus4999@gmail.com","Infocus4999@123"}
-		};
-		return arr;
-	}
+	
 }

@@ -50,4 +50,8 @@ public class JavaUtility {
 		return data;
 		
 	}
+	public void waitFromThread(int millisecond) throws InterruptedException
+	{
+		Thread.sleep(millisecond);
+	}
 }

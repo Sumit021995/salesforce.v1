@@ -18,6 +18,8 @@ public class ListenersImplementation implements ITestListener {
 	ExtentTest test;
 	ExtentReports  report;
 	String dateTimeStamp = new JavaUtility().getCalanderDetails("YYYYMMdd_hhmmss");
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal();
+	
 
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -26,6 +28,7 @@ public class ListenersImplementation implements ITestListener {
 		
 		// Adding test method to ExtentReports
 		test = report.createTest(methodName);
+		extentTest.set(test);
 	}
 
 	@Override
@@ -34,7 +37,8 @@ public class ListenersImplementation implements ITestListener {
 		Reporter.log("✅ "+ methodName+" Test Executed Successfully ",true);
 		
 		// Success status logging
-		test.log(Status.PASS, "✅ "+methodName+" is Passed");
+//		test.log(Status.PASS, "✅ "+methodName+" is Passed");
+		extentTest.get().log(Status.PASS, "✅ "+methodName+" is Passed");
 	}
 
 	@Override
@@ -43,13 +47,16 @@ public class ListenersImplementation implements ITestListener {
 		Reporter.log("❌ "+ methodName+" Test Executecution Failed... ",true);
 		Reporter.log("⚠️ in process to take Screenshot...",true);
 		// Fail status logging
-		test.log(Status.FAIL, "❌  "+methodName+" is Failed");
+//		test.log(Status.FAIL, "❌  "+methodName+" is Failed");
+		extentTest.get().log(Status.FAIL, "✅ "+methodName+" is Failed");
+		extentTest.get().log(Status.INFO, result.getThrowable());
 		// Info logging
-		test.log(Status.INFO, result.getThrowable().getMessage());
+//		test.log(Status.INFO, result.getThrowable());
 		
 		try {
-			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
-//			String path = new SeleniumUtility().getWebPageScreenshotFromBase64(BaseClass.sDriver);
+//			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
+//			test.addScreenCaptureFromPath(path);
+			String path = new SeleniumUtility().getWebPageScreenshotFromBase64(BaseClass.getDriver());
 			test.addScreenCaptureFromBase64String(path);
 	
 		} catch (IOException e) {
@@ -63,7 +70,8 @@ public class ListenersImplementation implements ITestListener {
 		String methodName = result.getMethod().getMethodName();
 		Reporter.log(methodName+" Test Skipped...",true);
 		// Skip Status logging
-		test.log(Status.SKIP, "⚠️ "+methodName+" Test Skipped");
+//		test.log(Status.SKIP, "⚠️ "+methodName+" Test Skipped");
+		extentTest.get().log(Status.SKIP, "⚠️ "+methodName+" Test Skipped");
 		
 	}
 
@@ -85,7 +93,7 @@ public class ListenersImplementation implements ITestListener {
 		Reporter.log("ON Start Executed",true);
 		// Configuration of Extent Report 
 		ExtentSparkReporter reporter = new ExtentSparkReporter(".//ExtentReport//report"+dateTimeStamp+".html");
-		reporter.config().setDocumentTitle("NinzaCrm_Report");
+		reporter.config().setDocumentTitle("NinzaCrm_Report"+dateTimeStamp);
 		reporter.config().setReportName("NinzaCrm_ExtentsReport");
 		reporter.config().setTheme(Theme.DARK);
 		

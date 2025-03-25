@@ -1,7 +1,6 @@
 package testScriptRepo;
 
 import org.testng.Assert;
-
 import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -12,10 +11,10 @@ import objectRepo.CampaignsPage;
 import objectRepo.CreateCampaignPage;
 
 
-@Listeners(genericUtility.ListenersImplementation.class)
+//@Listeners(genericUtility.ListenersImplementation.class)
 public class TC_001 extends BaseClass {
 	
-	@Test(groups= {"Smoke","Regression"})
+	@Test(groups= {"Smoke","Regression"},retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class)
 	public void createCampaign_001() throws Exception
 	{
 		System.out.println("Test Exceution Started");
@@ -26,8 +25,10 @@ public class TC_001 extends BaseClass {
 		int randomNumber = jUtil.generateRandomNumber(1000);
 		int randomNumber2 = jUtil.generateRandomNumber(100);
 		ccPage.createCampaign("Campaign0211"+randomNumber,"This is campaign Status "+randomNumber ,""+randomNumber2);
-		Assert.assertEquals((ccPage.getCreateCampaignConfirmationMsg().getText()).contains("Campaign0211"+randomNumber), true);
-		Reporter.log("Validated True",true);
-		Assert.fail();
+		new JavaUtility().waitFromThread(2000);
+		String confirmationMsg = ccPage.getCreateCampaignConfirmationMsg().getText();
+		Assert.assertTrue(confirmationMsg.contains("Campaign0211"+randomNumber));
+		
+		System.out.println("✅ Test Exceution Ended Successfully");
 	}
 }

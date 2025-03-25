@@ -6,6 +6,13 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesUtility {
+	/**
+	 * 
+	 * @param key
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
 	public String fetchValueFromPropertiesFile(String key) throws FileNotFoundException , IOException
 	{
 		FileInputStream file = new FileInputStream(IPathUtility.propertyFilePath);

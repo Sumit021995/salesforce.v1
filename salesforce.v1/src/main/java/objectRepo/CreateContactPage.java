@@ -6,10 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericUtility.JavaUtility;
 import genericUtility.WebDriverUtility;
 
+
+
 public class CreateContactPage {
-	WebDriver driver;
 	@FindBy(name="organizationName") private WebElement organizationTextField; 
 	@FindBy(name="department") private WebElement departmentTextField; 
 	@FindBy(name="title") private WebElement titleTextField; 
@@ -18,8 +20,23 @@ public class CreateContactPage {
 	@FindBy(name="mobile") private WebElement mobileTextField; 
 	@FindBy(name="email") private WebElement emailTextField;
 	@FindBy(xpath="//button[text()='Create Contact']") private WebElement createContactBtn; 
-	@FindBy(xpath="//*[name()='svg' and @data-icon='plus']") private WebElement createContactPlusIcon; 
+	@FindBy(xpath="//*[name()='svg' and @data-icon='plus']") private WebElement campaignTextFieldPlusIcon; 
+	@FindBy(id="search-criteria") private WebElement searchDropdown; 
+	@FindBy(id="search-input") private WebElement searchTextField; 
+	@FindBy(xpath="//button[@class='select-btn']") private WebElement firstCampaignSelectBtn; 
 	
+	public WebElement getFirstCampaignSelectBtn() {
+		return firstCampaignSelectBtn;
+	}
+
+	public WebElement getSearchDropdown() {
+		return searchDropdown;
+	}
+
+	public WebElement getSearchTextField() {
+		return searchTextField;
+	}
+
 	public WebElement getCreateContactBtn() {
 		return createContactBtn;
 	}
@@ -27,8 +44,8 @@ public class CreateContactPage {
 	public WebElement getOrganizationTextField() {
 		return organizationTextField;
 	}
-	public WebElement getCreateContactPlusIcon() {
-		return createContactPlusIcon;
+	public WebElement getCampaignTextFieldPlusIcon() {
+		return campaignTextFieldPlusIcon;
 	}
 
 	public WebElement getDepartmentTextField() {
@@ -52,11 +69,13 @@ public class CreateContactPage {
 	public CreateContactPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	public void createContactWithMandatoryFields(String org,String title,String contactName ,String mobile)
+	
+	public void createContactWithMandatoryFields(String org,String title,String contactName ,String mobile) throws InterruptedException
 	{
 		getOrganizationTextField().sendKeys(org,Keys.TAB,title);
 		getContactNameTextField().sendKeys(contactName,Keys.TAB,mobile);
-		WebDriverUtility wdUtil = new WebDriverUtility();
-		wdUtil.switchToWindow(driver, );
-	}
+		getCampaignTextFieldPlusIcon().click();	
+		
+	}	
+	
 }

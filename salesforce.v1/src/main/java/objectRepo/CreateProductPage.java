@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import genericUtility.JavaUtility;
-import net.bytebuddy.utility.RandomString;
+import genericUtility.WebDriverUtility;
 
 public class CreateProductPage {
 	@FindBy(xpath="//button[text()='Add']") private WebElement addProductBtn;
@@ -38,13 +38,15 @@ public class CreateProductPage {
 	public CreateProductPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	public void createProductWithMandatoryFields(WebDriver driver)
+	public void createProductWithMandatoryFields(String productName ,String category ,  int quantity , double price , int vendorIndex)
 	{
-		int randomNumber = new JavaUtility().generateRandomNumber(9);
 		
-		new DashboardPage(driver).getProductsLink().click();
-		new ProductPage(driver).getCreateProductBtn().click();
-		getProductNameTextField().sendKeys("Product"+randomNumber,Keys.TAB,Keys.TAB,""+randomNumber,Keys.TAB,""+1000*randomNumber);
+		getProductNameTextField().sendKeys(productName,Keys.TAB,Keys.TAB,""+quantity,Keys.TAB,""+1000*price);
+		WebDriverUtility wdUtility = new WebDriverUtility();
+		wdUtility.select(category, productCategoryDropDown);
+		wdUtility.select(vendorCategoryDropDown, vendorIndex);
+		addProductBtn.click();
+		
 		
 	}
 }

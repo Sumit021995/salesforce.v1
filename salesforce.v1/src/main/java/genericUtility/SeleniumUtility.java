@@ -210,7 +210,7 @@ public class SeleniumUtility {
 	 * @return
 	 * @throws IOException
 	 */
-	public String getWebPageScreenshotFromBase64(WebDriver driver,String dateTimeStamp) throws IOException
+	public String getWebPageScreenshotFromBase64(WebDriver driver) throws IOException
 	{
 		TakesScreenshot ts= (TakesScreenshot)driver;
 		String path = ts.getScreenshotAs(OutputType.BASE64);

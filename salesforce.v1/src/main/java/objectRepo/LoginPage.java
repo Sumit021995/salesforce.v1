@@ -13,7 +13,15 @@ public class LoginPage {
 	@FindBy(xpath="//button[@class='btn'") private WebElement loginBtn;
 	@FindBy(linkText="Forgot password?") private WebElement forgotPwdLink;
 	@FindBy(linkText="Create Account") private WebElement createAccountLink;
+	@FindBy(xpath="//*[name()='svg']") private WebElement accountIcon;
+	@FindBy(xpath="//div[text()='Logout ']") private WebElement logoutBtn;
 
+	public WebElement getLogoutBtn() {
+		return logoutBtn;
+	}
+	public WebElement getAccountIcon() {
+		return accountIcon;
+	}
 	public WebElement getUnTextField() {
 		return unTextField;
 	}
@@ -52,7 +60,9 @@ public class LoginPage {
 	public void logoutFromApplication(WebDriver driver)
 	{
 		Actions act = new Actions(driver);
-		
+		act.moveToElement(getAccountIcon()).perform();
+		getLogoutBtn().click();
+			
 	}
 	
 	

@@ -6,6 +6,7 @@
       <class name="testScriptRepo.TC_004"/>
       <class name="testScriptRepo.TC_003"/>
       <class name="testScriptRepo.TC_001"/>
+      <class name="testScriptRepo.TC_002"/>
      
     </classes>
   </test> <!-- Test -->
