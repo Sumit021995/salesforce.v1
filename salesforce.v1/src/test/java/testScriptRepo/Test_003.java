@@ -19,7 +19,7 @@ import objectRepo.DashboardPage;
 public class Test_003 extends BaseClass{
 	
 //	@DataProvider(sampleTestExecution.DataProviderLoginExample.class)
-	@Test (groups= {"Smoke"}, retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class,dataProvider = "createContactData")
+	@Test (groups= {"Smoke"}, retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class,dataProvider = "provideCreateContactData")
 	public void createContact_001(HashMap<String,String> m) throws Exception
 	{
 		System.out.println("Test Exceution Started");
@@ -46,7 +46,7 @@ public class Test_003 extends BaseClass{
 		Reporter.log("✅ Test Exceution Ended Successfully",true);
 	}
 	
-	@DataProvider(name="createContactData")
+	@DataProvider
 	public Object[][] provideCreateContactData()
 	{
 		HashMap<String, String> data1 = new HashMap<String,String>();
@@ -70,4 +70,29 @@ public class Test_003 extends BaseClass{
 		};
 		return arr;
 	}
+	
+//	@DataProvider(name="createContactData")
+//	public Object[][] provideCreateContactData()
+//	{
+//		HashMap<String, String> data1 = new HashMap<String,String>();
+//		data1.put("org", "QualiMe_YT_Data1");
+//		data1.put("title", "Title_Data1");
+//		data1.put("contactName", "Sumit_Saurav_Data1");
+//		data1.put("mobile", "9818425197_Data1");
+//		HashMap<String, String> data2 = new HashMap<String,String>();
+//		data2.put("org", "QualiMe__YT_Data2");
+//		data2.put("title", "Title_Data2");
+//		data2.put("contactName", "Sumit_Saurav_Data2");
+//		data2.put("mobile", "9818425197_Data2");
+//		
+////		Object[][] arr = {
+////				{"sumitofficial021995@gmail.com","Infocus4999@"},
+////				{"infocus4999@gmail.com","Infocus4999@123"}
+////		};
+//		Object[][] arr = {
+//				{data1},
+//				{data2}
+//		};
+//		return arr;
+//	}
 }

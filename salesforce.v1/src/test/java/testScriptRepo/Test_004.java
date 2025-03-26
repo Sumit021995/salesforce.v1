@@ -1,14 +1,13 @@
 package testScriptRepo;
 
+import java.util.HashMap;
+
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import genericUtility.BaseClass;
 import genericUtility.JavaUtility;
-import genericUtility.SeleniumUtility;
-import genericUtility.WebDriverUtility;
 import objectRepo.CreateProductPage;
 import objectRepo.DashboardPage;
 import objectRepo.ProductPage;
@@ -30,4 +29,12 @@ public class Test_004 extends BaseClass {
 		Assert.assertEquals(confirmationMsg.contains("Drone"+randomNumber),true);
 		
 	}
+//	@Test(dataProvider = "provideCreateContactData",dataProviderClass = testScriptRepo.Test_003.class)
+//	public void getDataPrint(HashMap<String,String> m)
+//	{
+//		System.out.println(m.get("org"));
+//		System.out.println(m.get("title"));
+//		System.out.println(m.get("contactName"));
+//		System.out.println(m.get("mobile"));
+//	}
 }
