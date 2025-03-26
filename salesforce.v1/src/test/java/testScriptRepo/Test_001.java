@@ -22,12 +22,11 @@ public class Test_001 extends BaseClass {
 		cPage.clickOnCreateCampaignBtn();
 		CreateCampaignPage ccPage = new CreateCampaignPage(driver);
 		JavaUtility jUtil = new JavaUtility();
-		int randomNumber = jUtil.generateRandomNumber(1000);
-		int randomNumber2 = jUtil.generateRandomNumber(100);
-		ccPage.createCampaign("Campaign0211"+randomNumber,"This is campaign Status "+randomNumber ,""+randomNumber2);
+		String dateFormat = jUtil.getCalanderDetails("dd_MMM_hhmmss");
+		ccPage.createCampaign("Campaign_"+dateFormat,"This is campaign Status "+dateFormat ,""+dateFormat);
 		new JavaUtility().waitFromThread(2000);
 		String confirmationMsg = ccPage.getCreateCampaignConfirmationMsg().getText();
-		Assert.assertTrue(confirmationMsg.contains("Campaign0211"+randomNumber));
+		Assert.assertTrue(confirmationMsg.contains("Campaign_"+dateFormat));
 		
 		System.out.println("✅ Test Exceution Ended Successfully");
 	}
