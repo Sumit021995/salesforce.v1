@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[ON Start Executed]]>
+      <![CDATA[onStart method Execution Started]]>
     </line>
     <line>
-      <![CDATA[✅ createCampaign_001 Test Started Successfully of class:testScriptRepo.Test_001.createCampaign_001]]>
+      <![CDATA[✅ testScriptRepo.Test_004.createProduct Test Started Successfully ]]>
     </line>
     <line>
-      <![CDATA[✅ createCampaign_001 Test Executed Successfully ]]>
+      <![CDATA[✅ createProduct Test Executed Successfully ]]>
+    </line>
+    <line>
+      <![CDATA[✅ testScriptRepo.Test_004.getDataPrint Test Started Successfully ]]>
+    </line>
+    <line>
+      <![CDATA[✅ getDataPrint Test Executed Successfully ]]>
+    </line>
+    <line>
+      <![CDATA[✅ testScriptRepo.Test_004.getDataPrint Test Started Successfully ]]>
+    </line>
+    <line>
+      <![CDATA[✅ getDataPrint Test Executed Successfully ]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-26T19:17:31 IST" name="Default suite" finished-at="2025-03-26T19:18:05 IST" duration-ms="34413">
+  <suite started-at="2025-03-26T22:06:34 IST" name="Default suite" finished-at="2025-03-26T22:07:37 IST" duration-ms="63030">
     <groups>
       <group name="Regression">
-        <method signature="Test_001.createCampaign_001()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" name="createCampaign_001" class="testScriptRepo.Test_001"/>
+        <method signature="Test_004.createProduct()[pri:0, instance:testScriptRepo.Test_004@36902638]" name="createProduct" class="testScriptRepo.Test_004"/>
       </group> <!-- Regression -->
-      <group name="Smoke">
-        <method signature="Test_001.createCampaign_001()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" name="createCampaign_001" class="testScriptRepo.Test_001"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-03-26T19:17:31 IST" name="Default test" finished-at="2025-03-26T19:18:05 IST" duration-ms="34413">
-      <class name="testScriptRepo.Test_001">
-        <test-method is-config="true" signature="dbConnection()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" started-at="2025-03-26T19:17:27 IST" name="dbConnection" finished-at="2025-03-26T19:17:31 IST" duration-ms="3117" status="PASS">
+    <test started-at="2025-03-26T22:06:34 IST" name="Default test" finished-at="2025-03-26T22:07:37 IST" duration-ms="63030">
+      <class name="testScriptRepo.Test_004">
+        <test-method is-config="true" signature="dbConnection()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:06:32 IST" name="dbConnection" finished-at="2025-03-26T22:06:34 IST" duration-ms="2166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dbConnection -->
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" started-at="2025-03-26T19:17:32 IST" name="launchBrowser" finished-at="2025-03-26T19:17:39 IST" duration-ms="6714" status="PASS">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:06:35 IST" name="launchBrowser" finished-at="2025-03-26T22:06:42 IST" duration-ms="6495" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,33 +46,83 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="loginOperation()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" started-at="2025-03-26T19:17:39 IST" name="loginOperation" finished-at="2025-03-26T19:17:43 IST" duration-ms="4450" status="PASS">
+        <test-method is-config="true" signature="loginOperation()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:06:42 IST" name="loginOperation" finished-at="2025-03-26T22:06:42 IST" duration-ms="654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginOperation -->
-        <test-method signature="createCampaign_001()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" started-at="2025-03-26T19:17:43 IST" name="createCampaign_001" finished-at="2025-03-26T19:17:47 IST" duration-ms="3718" status="PASS">
+        <test-method signature="createProduct()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:06:42 IST" name="createProduct" finished-at="2025-03-26T22:06:47 IST" duration-ms="4531" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[✅ createCampaign_001 Test Started Successfully of class:testScriptRepo.Test_001.createCampaign_001]]>
+              <![CDATA[✅ testScriptRepo.Test_004.createProduct Test Started Successfully ]]>
             </line>
             <line>
-              <![CDATA[✅ createCampaign_001 Test Executed Successfully ]]>
+              <![CDATA[✅ createProduct Test Executed Successfully ]]>
             </line>
           </reporter-output>
-        </test-method> <!-- createCampaign_001 -->
-        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" started-at="2025-03-26T19:17:47 IST" name="logoutOperation" finished-at="2025-03-26T19:18:03 IST" duration-ms="16152" status="PASS">
+        </test-method> <!-- createProduct -->
+        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:06:47 IST" name="logoutOperation" finished-at="2025-03-26T22:07:03 IST" duration-ms="16069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutOperation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" started-at="2025-03-26T19:18:03 IST" name="closeBrowser" finished-at="2025-03-26T19:18:05 IST" duration-ms="1968" status="PASS">
+        <test-method is-config="true" signature="loginOperation()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:03 IST" name="loginOperation" finished-at="2025-03-26T22:07:04 IST" duration-ms="528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOperation -->
+        <test-method signature="getDataPrint(java.util.HashMap)[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:04 IST" name="getDataPrint" data-provider="provideCreateContactData" finished-at="2025-03-26T22:07:04 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{mobile=9818425197_Data1, title=Title_Data1, org=QualiMe_YT_Data1, contactName=Sumit_Saurav_Data1}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[✅ testScriptRepo.Test_004.getDataPrint Test Started Successfully ]]>
+            </line>
+            <line>
+              <![CDATA[✅ getDataPrint Test Executed Successfully ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getDataPrint -->
+        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:04 IST" name="logoutOperation" finished-at="2025-03-26T22:07:20 IST" duration-ms="16096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutOperation -->
+        <test-method is-config="true" signature="loginOperation()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:20 IST" name="loginOperation" finished-at="2025-03-26T22:07:20 IST" duration-ms="546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOperation -->
+        <test-method signature="getDataPrint(java.util.HashMap)[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:20 IST" name="getDataPrint" data-provider="provideCreateContactData" finished-at="2025-03-26T22:07:20 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{mobile=9818425197_Data2, title=Title_Data2, org=QualiMe__YT_Data2, contactName=Sumit_Saurav_Data2}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[✅ testScriptRepo.Test_004.getDataPrint Test Started Successfully ]]>
+            </line>
+            <line>
+              <![CDATA[✅ getDataPrint Test Executed Successfully ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getDataPrint -->
+        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:20 IST" name="logoutOperation" finished-at="2025-03-26T22:07:36 IST" duration-ms="16116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutOperation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:36 IST" name="closeBrowser" finished-at="2025-03-26T22:07:37 IST" duration-ms="928" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeDatabaseConnection()[pri:0, instance:testScriptRepo.Test_001@16d04d3d]" started-at="2025-03-26T19:18:06 IST" name="closeDatabaseConnection" finished-at="2025-03-26T19:18:06 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="closeDatabaseConnection()[pri:0, instance:testScriptRepo.Test_004@36902638]" started-at="2025-03-26T22:07:38 IST" name="closeDatabaseConnection" finished-at="2025-03-26T22:07:38 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDatabaseConnection -->
-      </class> <!-- testScriptRepo.Test_001 -->
+      </class> <!-- testScriptRepo.Test_004 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

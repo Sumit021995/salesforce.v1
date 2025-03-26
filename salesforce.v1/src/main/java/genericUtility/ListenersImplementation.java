@@ -91,7 +91,7 @@ public class ListenersImplementation implements ITestListener {
 	@Override
 	public void onStart(ITestContext context) {
 		
-		Reporter.log("ON Start Executed",true);
+		Reporter.log("onStart method Execution Started",true);
 		// Configuration of Extent Report 
 		ExtentSparkReporter reporter = new ExtentSparkReporter(".//ExtentReport//report"+dateTimeStamp+".html");
 		reporter.config().setDocumentTitle("NinzaCrm_Report"+dateTimeStamp);

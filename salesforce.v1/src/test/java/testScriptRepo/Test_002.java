@@ -22,8 +22,9 @@ public class Test_002 extends BaseClass {
 		CreateCampaignPage ccPage = new CreateCampaignPage(driver);
 		JavaUtility jUtil = new JavaUtility();
 		String dateFormat = jUtil.getCalanderDetails("dd_MMM_hhmmss");
+		int randomTarget = 10+jUtil.generateRandomNumber(100);
 		String dateFormat2 = jUtil.getCalanderDetails("dd-MM-YYYY",10);
-		ccPage.createCampaign("Campaign_"+dateFormat,"campaign Status:"+dateFormat ,dateFormat,dateFormat2);
+		ccPage.createCampaign("Campaign_"+dateFormat,"campaign Status:"+dateFormat ,""+randomTarget,dateFormat2);
 		new JavaUtility().waitFromThread(2000);
 		String confirmationMsg = ccPage.getCreateCampaignConfirmationMsg().getText();
 		Assert.assertTrue(confirmationMsg.contains("Campaign_"+dateFormat));

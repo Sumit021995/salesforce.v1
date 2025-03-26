@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sampleTestExecution.DataProviderLoginExample">
+      <class name="testScriptRepo.Test_003">
         <methods>
-          <include name="loginToShopperAndLogout" invocation-numbers="0 1"/>
+          <include name="closeDatabaseConnection"/>
+          <include name="dbConnection"/>
+          <include name="logoutOperation"/>
+          <include name="loginOperation"/>
+          <include name="createContact_001" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- sampleTestExecution.DataProviderLoginExample -->
+      </class> <!-- testScriptRepo.Test_003 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
