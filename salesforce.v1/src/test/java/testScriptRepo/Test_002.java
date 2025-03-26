@@ -10,7 +10,7 @@ import genericUtility.JavaUtility;
 import objectRepo.CampaignsPage;
 import objectRepo.CreateCampaignPage;
 
-//@Listeners(genericUtility.ListenersImplementation.class)
+@Listeners(genericUtility.ListenersImplementation.class)
 public class Test_002 extends BaseClass {
 	
 	@Test(groups= {"Smoke"}, retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class)
@@ -21,14 +21,12 @@ public class Test_002 extends BaseClass {
 		cPage.clickOnCreateCampaignBtn();
 		CreateCampaignPage ccPage = new CreateCampaignPage(driver);
 		JavaUtility jUtil = new JavaUtility();
-		int randomNumber = jUtil.generateRandomNumber(1000);
-		int randomNumber2 = jUtil.generateRandomNumber(100);
-		int randomNumber3 = jUtil.generateRandomNumber(10);
-		String calanderDetails = jUtil.getCalanderDetails("dd-MM-YYYY", randomNumber3);
-		ccPage.createCampaign("Campaign0211"+randomNumber,"This is campaign Status "+randomNumber ,""+randomNumber2,calanderDetails);
+		String dateFormat = jUtil.getCalanderDetails("dd_MMM_hhmmss");
+		String dateFormat2 = jUtil.getCalanderDetails("dd-MM-YYYY",10);
+		ccPage.createCampaign("Campaign_"+dateFormat,"campaign Status:"+dateFormat ,dateFormat,dateFormat2);
 		new JavaUtility().waitFromThread(2000);
 		String confirmationMsg = ccPage.getCreateCampaignConfirmationMsg().getText();
-		Assert.assertTrue(confirmationMsg.contains("Campaign0211"));
+		Assert.assertTrue(confirmationMsg.contains("Campaign_"+dateFormat));
 		System.out.println("✅ Test Exceution Ended Successfully");
 	}
 }
