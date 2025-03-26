@@ -25,7 +25,7 @@ public class ListenersImplementation implements ITestListener {
 	public void onTestStart(ITestResult result) {
 //		String className = result.getMethod().getQualifiedName();
 		String methodName = result.getMethod().getQualifiedName();
-		Reporter.log("✅ "+ methodName+" Test Started Successfully of class:"+className ,true);
+		Reporter.log("✅ "+ methodName+" Test Started Successfully ",true);
 		
 		// Adding test method to ExtentReports
 		test = report.createTest(methodName);
