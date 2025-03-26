@@ -11,7 +11,7 @@ import objectRepo.CampaignsPage;
 import objectRepo.CreateCampaignPage;
 
 
-//@Listeners(genericUtility.ListenersImplementation.class)
+@Listeners(genericUtility.ListenersImplementation.class)
 public class Test_001 extends BaseClass {
 	
 	@Test(groups= {"Smoke","Regression"},retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class)
