@@ -2,6 +2,8 @@ package genericUtility;
 
 import java.io.IOException;
 
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -13,8 +15,18 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ListenersImplementation implements ITestListener {
+public class ListenersImplementation implements ITestListener ,ISuiteListener{
 	
+	@Override
+	public void onStart(ISuite suite) {
+		
+	}
+
+	@Override
+	public void onFinish(ISuite suite) {
+		
+	}
+
 	ExtentTest test;
 	ExtentReports  report;
 	String dateTimeStamp = new JavaUtility().getCalanderDetails("YYYYMMdd_hhmmss");
