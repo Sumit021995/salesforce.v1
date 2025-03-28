@@ -188,7 +188,7 @@ public class SeleniumUtility {
 	////////////******Handling Screenshot*******/////////////
 	
 	/**
-	 * This generic method is used to take screenshot of a Web Page
+	 * This generic method is used to take screenshot of a Web Page and return absolutePath of screenshot location
 	 * @param driver
 	 * @param dateTimeStamp
 	 * @return String
@@ -204,10 +204,10 @@ public class SeleniumUtility {
 
 	}
 	/**
-	 * 
+	 * This generic method is used to take screenshot of a Web Page as BASE64 format
 	 * @param driver
 	 * @param dateTimeStamp
-	 * @return
+	 * @return String
 	 * @throws IOException
 	 */
 	public String getWebPageScreenshotFromBase64(WebDriver driver) throws IOException
