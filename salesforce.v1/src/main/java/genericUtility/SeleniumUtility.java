@@ -191,7 +191,7 @@ public class SeleniumUtility {
 	 * This generic method is used to take screenshot of a Web Page
 	 * @param driver
 	 * @param dateTimeStamp
-	 * @return
+	 * @return String
 	 * @throws IOException
 	 */
 	public String getWebPageScreenshot(WebDriver driver,String dateTimeStamp) throws IOException
