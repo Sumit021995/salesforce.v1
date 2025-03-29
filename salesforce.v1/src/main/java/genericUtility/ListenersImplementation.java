@@ -1,6 +1,7 @@
 package genericUtility;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -17,21 +18,22 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ListenersImplementation implements ITestListener ,ISuiteListener{
 	
-	@Override
-	public void onStart(ISuite suite) {
-		
-	}
-
-	@Override
-	public void onFinish(ISuite suite) {
-		
-	}
 
 	ExtentTest test;
 	ExtentReports  report;
 	String dateTimeStamp = new JavaUtility().getCalanderDetails("YYYYMMdd_hhmmss");
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal();
 	
+	@Override
+	public void onStart(ISuite suite) {
+		System.out.println("Suite Level Report Configuration");
+		String time = new Date().toString().replace(" ", "_").replace(":", "_");
+		}
+	
+	@Override
+	public void onFinish(ISuite suite) {
+		System.out.println("Suite Level Report BackUp");
+	}
 
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -90,16 +92,14 @@ public class ListenersImplementation implements ITestListener ,ISuiteListener{
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		
+
 	}
 
 	@Override
 	public void onTestFailedWithTimeout(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		Reporter.log("❌ "+methodName+" On Test Failed With Timeout..",true);
-		
 	}
-
 	@Override
 	public void onStart(ITestContext context) {
 		
