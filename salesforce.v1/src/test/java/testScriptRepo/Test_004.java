@@ -12,7 +12,7 @@ import objectRepo.CreateProductPage;
 import objectRepo.DashboardPage;
 import objectRepo.ProductPage;
 
-@Listeners(genericUtility.ListenersImplementation.class)
+//@Listeners(genericUtility.ListenersImplementation.class)
 public class Test_004 extends BaseClass {
 	@Test(groups= {"Regression"}, retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class)
 	public void createProduct() throws Exception
