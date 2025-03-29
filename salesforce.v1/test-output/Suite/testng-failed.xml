@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="4" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="genericUtility.ListenersImplementation"/>
-  </listeners>
-  <test thread-count="4" parallel="classes" name="Test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testScriptRepo.TC_002">
+      <class name="testScriptRepo.Test_003">
         <methods>
           <include name="closeDatabaseConnection"/>
           <include name="dbConnection"/>
-          <include name="createCampaign_002"/>
           <include name="logoutOperation"/>
           <include name="loginOperation"/>
+          <include name="createContact_001" invocation-numbers="1"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testScriptRepo.TC_002 -->
+      </class> <!-- testScriptRepo.Test_003 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
