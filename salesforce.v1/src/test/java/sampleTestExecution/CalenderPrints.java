@@ -2,6 +2,7 @@ package sampleTestExecution;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class CalenderPrints {
 	public static void main(String[] args) {
@@ -25,5 +26,13 @@ public class CalenderPrints {
 		SimpleDateFormat sdf6 = new SimpleDateFormat("dd_MMM_hhmmss");
 		String format6 = sdf6.format(cal.getTime());
 		System.out.println(format6);// 26_Mar_082626
+		SimpleDateFormat sdf7 = new SimpleDateFormat("dd_MMM_hhmmss");
+		String format7 = sdf7.format(cal.getTime());
+		System.out.println(format7);// 26_Mar_082626
+		SimpleDateFormat sdf8 = new SimpleDateFormat("dd_MMM_hhmmss");
+		String format8 = sdf8.format(cal.getTime());
+		System.out.println(format8);// 26_Mar_082626
+		String time = new Date().toString().replace(" ", "_").replace(":", "_");
+		System.out.println(time); // Thu_Mar_27_20_25_44_IST_2025
 	}
 }
