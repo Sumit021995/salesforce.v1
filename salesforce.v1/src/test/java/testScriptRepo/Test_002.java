@@ -10,7 +10,7 @@ import genericUtility.JavaUtility;
 import objectRepo.CampaignsPage;
 import objectRepo.CreateCampaignPage;
 
-@Listeners(genericUtility.ListenersImplementation.class)
+//@Listeners(genericUtility.ListenersImplementation.class)
 public class Test_002 extends BaseClass {
 	
 	@Test(groups= {"Smoke"}, retryAnalyzer = genericUtility.RetryAnalyzerImplementation.class)
