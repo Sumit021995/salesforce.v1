@@ -14,7 +14,7 @@ import genericUtility.WebDriverUtility;
 import objectRepo.ContactPage;
 import objectRepo.CreateContactPage;
 import objectRepo.DashboardPage;
-@Listeners(genericUtility.ListenersImplementation.class)
+//@Listeners(genericUtility.ListenersImplementation.class)
 
 public class Test_003 extends BaseClass{
 	
@@ -35,7 +35,7 @@ public class Test_003 extends BaseClass{
 		WebDriverUtility wdUtil = new WebDriverUtility();
 		wdUtil.switchToWindow(driver,childUrl);
 		wdUtil.select(ccPage.getSearchDropdown(), 1);
-		ccPage.getSearchTextField().sendKeys("Campaign0211");
+		ccPage.getSearchTextField().sendKeys("Campaign_");
 		ccPage.getFirstCampaignSelectBtn().click();
 		wdUtil.switchToWindow(driver, parentUrl);
 		ccPage.getCreateContactBtn().click();
