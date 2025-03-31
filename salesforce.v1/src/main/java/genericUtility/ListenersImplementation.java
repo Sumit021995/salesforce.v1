@@ -72,7 +72,7 @@ public class ListenersImplementation implements ITestListener ,ISuiteListener{
 //			String path = new SeleniumUtility().getWebPageScreenshot(BaseClass.sDriver, dateTimeStamp);
 //			test.addScreenCaptureFromPath(path);
 			String path = new SeleniumUtility().getWebPageScreenshotFromBase64(BaseClass.getDriver());
-			test.addScreenCaptureFromBase64String(path);
+			test.addScreenCaptureFromBase64String(path,methodName);
 	
 		} catch (IOException e) {
 			e.printStackTrace();
