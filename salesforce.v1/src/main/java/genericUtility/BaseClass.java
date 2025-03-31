@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -87,25 +88,20 @@ public class BaseClass {
 	@BeforeMethod(alwaysRun = true )
 	public void loginOperation() throws Exception
 	{
-		
-		ExtentTest test = report.createTest("Login Test").info("Login operation Started");
-		int maxRetry=2;
-		for(int attempt=0; attempt<=maxRetry; attempt++)
-		{
-			try {
+		try {
 				String UN=dbUtil.fetchDataFromTable(3);
 				String PWD=dbUtil.fetchDataFromTable(4);
 				LoginPage lp=new LoginPage(driver);
 				lp.loginToApp(UN, PWD);
-				test.pass("✅ Login done successfully");
-				break;
-			} catch (Exception e) {
-				test.fail("❌ Login Failed ");
 				
-			}
-		}
+			} catch (Exception e) {
+	            
+	             System.out.println("Login failed due to Exception");
+	             loginOperation();
+	        }
 		System.out.println("✅ Login done successfully");
-	}
+		}
+	
 	
 	@AfterMethod(alwaysRun = true)
 	public void logoutOperation()
