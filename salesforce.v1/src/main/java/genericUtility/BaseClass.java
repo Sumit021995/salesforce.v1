@@ -13,6 +13,8 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import objectRepo.DashboardPage;
 import objectRepo.LoginPage;
 
@@ -79,10 +81,12 @@ public class BaseClass {
 		System.out.println("✅ Browser launched successfully");
 	}
 	
-
-	@BeforeMethod(alwaysRun = true)
+	
+	@BeforeMethod(alwaysRun = true )
 	public void loginOperation() throws Exception
 	{
+		ExtentTest lTest= new ExtentTest();
+		
 		String UN=dbUtil.fetchDataFromTable(3);
 		String PWD=dbUtil.fetchDataFromTable(4);
 		LoginPage lp=new LoginPage(driver);
