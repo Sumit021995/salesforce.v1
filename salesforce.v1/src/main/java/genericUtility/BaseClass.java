@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import objectRepo.DashboardPage;
@@ -20,6 +21,7 @@ import objectRepo.LoginPage;
 
 public class BaseClass {
 
+	ExtentReports report;
 	public WebDriver driver;
 //	public static WebDriver sDriver;		//only for listeners
 	public SeleniumUtility sUtil=new SeleniumUtility();
@@ -85,12 +87,23 @@ public class BaseClass {
 	@BeforeMethod(alwaysRun = true )
 	public void loginOperation() throws Exception
 	{
-		ExtentTest lTest= new ExtentTest();
 		
-		String UN=dbUtil.fetchDataFromTable(3);
-		String PWD=dbUtil.fetchDataFromTable(4);
-		LoginPage lp=new LoginPage(driver);
-		lp.loginToApp(UN, PWD);
+		ExtentTest test = report.createTest("Login Test").info("Login operation Started");
+		int maxRetry=2;
+		for(int attempt=0; attempt<=maxRetry; attempt++)
+		{
+			try {
+				String UN=dbUtil.fetchDataFromTable(3);
+				String PWD=dbUtil.fetchDataFromTable(4);
+				LoginPage lp=new LoginPage(driver);
+				lp.loginToApp(UN, PWD);
+				test.pass("✅ Login done successfully");
+				break;
+			} catch (Exception e) {
+				test.fail("❌ Login Failed ");
+				
+			}
+		}
 		System.out.println("✅ Login done successfully");
 	}
 	
