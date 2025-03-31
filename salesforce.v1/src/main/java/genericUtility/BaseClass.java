@@ -19,7 +19,7 @@ import objectRepo.LoginPage;
 public class BaseClass {
 
 	public WebDriver driver;
-	public static WebDriver sDriver;		//only for listeners
+//	public static WebDriver sDriver;		//only for listeners
 	public SeleniumUtility sUtil=new SeleniumUtility();
 	public PropertiesUtility pUtil=new PropertiesUtility();
 	public ExcelUtility eUtil=new ExcelUtility();
