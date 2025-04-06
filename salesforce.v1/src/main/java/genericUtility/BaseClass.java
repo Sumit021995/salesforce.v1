@@ -22,7 +22,6 @@ import objectRepo.LoginPage;
 
 public class BaseClass {
 
-	ExtentReports report;
 	public WebDriver driver;
 //	public static WebDriver sDriver;		//only for listeners
 	public SeleniumUtility sUtil=new SeleniumUtility();
@@ -59,6 +58,7 @@ public class BaseClass {
 	@BeforeClass(alwaysRun = true)
 	public void launchBrowser(@Optional("chrome") String BROWSER) throws Exception
 	{
+//		String value = System.getProperty("key");
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
 			driver=new ChromeDriver();
@@ -88,20 +88,13 @@ public class BaseClass {
 	@BeforeMethod(alwaysRun = true )
 	public void loginOperation() throws Exception
 	{
-		try {
-				String UN=dbUtil.fetchDataFromTable(3);
-				String PWD=dbUtil.fetchDataFromTable(4);
-				LoginPage lp=new LoginPage(driver);
-				lp.loginToApp(UN, PWD);
-				
-			} catch (Exception e) {
-	            
-	             System.out.println("Login failed due to Exception");
-	             loginOperation();
-	        }
+		String UN=dbUtil.fetchDataFromTable(3);
+		String PWD=dbUtil.fetchDataFromTable(4);
+		LoginPage lp=new LoginPage(driver);
+		lp.loginToApp(UN, PWD);
+		
 		System.out.println("✅ Login done successfully");
-		}
-	
+	}
 	
 	@AfterMethod(alwaysRun = true)
 	public void logoutOperation()
