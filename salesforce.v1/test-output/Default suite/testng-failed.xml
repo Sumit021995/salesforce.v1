@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScriptRepo.Test_003">
+      <class name="testScriptRepo.Test_001">
         <methods>
           <include name="closeDatabaseConnection"/>
           <include name="dbConnection"/>
           <include name="logoutOperation"/>
           <include name="loginOperation"/>
-          <include name="createContact_001" invocation-numbers="0"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
+          <include name="createCampaign_001"/>
         </methods>
-      </class> <!-- testScriptRepo.Test_003 -->
+      </class> <!-- testScriptRepo.Test_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

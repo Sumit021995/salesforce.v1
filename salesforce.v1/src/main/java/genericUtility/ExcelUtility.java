@@ -13,6 +13,8 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+
+
 public class ExcelUtility {
 	public List<String> fetchMultipleDataFromExcelFile(String sheetName,int startRowNum ) throws Exception
 	{
@@ -31,8 +33,26 @@ public class ExcelUtility {
 				excelDataList.add(data);	
 			}
 		}
-					
+		wb.close();			
 		return excelDataList;
+	}
+	public int getRowCount(String sheetName) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream file = new FileInputStream(IPathUtility.excelFilePath);
+		Workbook wb = WorkbookFactory.create(file);
+		int rownum=wb.getSheet(sheetName).getLastRowNum();
+		wb.close();
+		return rownum;
+		
+	}
+	public int getColumnCount(String sheetName,int rowNum) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream file = new FileInputStream(IPathUtility.excelFilePath);
+		Workbook wb = WorkbookFactory.create(file);
+		int cellNum=wb.getSheet(sheetName).getRow(rowNum).getLastCellNum();
+		wb.close();
+		return cellNum;
+		
 	}
 	public List<String> fetchMultipleDataFromExcelFileWithFixedRow(String sheetName,int fixedRowIndex ,int startCellNum) throws Exception
 	{
@@ -49,6 +69,7 @@ public class ExcelUtility {
 				String data = stringFormatExcelData.formatCellValue(cell);
 				excelDataList.add(data);	
 			}
+			wb.close();
 		return excelDataList;
 	}
 	public List<String> fetchMultipleDataOfColumnFromExcelFile(String sheetName,int fixedCellIndex) throws Exception
@@ -64,6 +85,7 @@ public class ExcelUtility {
 				String data = stringFormatExcelData.formatCellValue(cell);
 				excelDataList.add(data);	
 		}
+		wb.close();
 		return excelDataList;
 	}
 	/**
@@ -82,6 +104,7 @@ public class ExcelUtility {
 		DataFormatter data = new DataFormatter();
 		Cell cell  = wb.getSheet(sheetName).getRow(rowNum).getCell(cellNum);
 		String value = data.formatCellValue(cell);
+		wb.close();
 		return value;
 	}
 //	public static void main(String[] args) throws Exception {
@@ -90,6 +113,9 @@ public class ExcelUtility {
 //		System.out.println(data);
 //		List<String> singleColumnData = excelUtility.fetchMultipleDataOfColumnFromExcelFile("Sheet2", 0);
 //		System.out.println(singleColumnData);
+//		int columnCount = excelUtility.getColumnCount("Sheet2", 2);
+//		System.out.println(columnCount);//3
 //	}
+	
 	
 }

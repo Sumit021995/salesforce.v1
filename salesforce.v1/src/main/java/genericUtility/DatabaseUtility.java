@@ -25,29 +25,37 @@ public class DatabaseUtility {
 	Connection con;
 	public void connectToDatabase(String dbUrl, String UN, String PWD) throws Exception
 	{
-		Driver driverRef = new Driver();
-		DriverManager.registerDriver(driverRef);
-		con = DriverManager.getConnection(dbUrl, UN, PWD);
+		try {
+			Driver driverRef = new Driver();
+			DriverManager.registerDriver(driverRef);
+			con = DriverManager.getConnection(dbUrl, UN, PWD);
+			
+		} catch (Exception e) {e.printStackTrace();}
 	}
 	
 	public void updateDataIntoTable(String username, String password) throws Exception
 	{
-		String query="insert into credential (username,password) values (?, ?);";
-		PreparedStatement ps = con.prepareStatement(query);
-		ps.setString(1, username);
-		ps.setString(2, password);
-		int rs=ps.executeUpdate();
-		if(rs>0)
-		{
-			System.out.println("A new row inserted");
-		}
-		else
-		{
-			System.out.println("duplicate row already exists");
+		try {
+			String query="insert into credential (username,password) values (?, ?);";
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, username);
+			ps.setString(2, password);
+			int rs=ps.executeUpdate();
+			if(rs>0)
+			{
+				System.out.println("A new row inserted");
+			}
+			else
+			{
+				System.out.println("duplicate row already exists");
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
-//	public String fetchDataFromTable(int columnNo) throws Exception
+//	public String fetchDataFromTable(int column No) throws Exception
 //	{
 //		Statement stmt = con.createStatement();
 //		ResultSet resultSet = stmt.executeQuery("select * from commondata");
@@ -60,22 +68,27 @@ public class DatabaseUtility {
 //	}
 	
 	public String fetchDataFromTable(int columnNo) throws Exception {
-		PropertiesUtility pUtil = new PropertiesUtility();
-	    if (con == null || con.isClosed()) {
-	        System.out.println("⚠️ Connection lost. Re-establishing connection...");
-	        String dbURL = pUtil.fetchValueFromPropertiesFile("mysqlURL");
-	        String dbUN = pUtil.fetchValueFromPropertiesFile("mysqlUN");
-	        String dbPWD = pUtil.fetchValueFromPropertiesFile("mysqlPWD");
-	        connectToDatabase(dbURL, dbUN, dbPWD);  // Re-establish connection
-	    }
-
-	    Statement stmt = con.createStatement();
-	    ResultSet resultSet = stmt.executeQuery("SELECT * FROM commondata");
-	    
-	    while (resultSet.next()) {
-	        return resultSet.getString(columnNo); 
-	    }
-	    return null;
+		try {
+			PropertiesUtility pUtil = new PropertiesUtility();
+			if (con == null || con.isClosed()) {
+				System.out.println("⚠️ Connection lost. Re-establishing connection...");
+				String dbURL = pUtil.fetchValueFromPropertiesFile("mysqlURL");
+				String dbUN = pUtil.fetchValueFromPropertiesFile("mysqlUN");
+				String dbPWD = pUtil.fetchValueFromPropertiesFile("mysqlPWD");
+				connectToDatabase(dbURL, dbUN, dbPWD);  // Re-establish connection
+			}
+			
+			Statement stmt = con.createStatement();
+			ResultSet resultSet = stmt.executeQuery("SELECT * FROM commondata");
+			
+			while (resultSet.next()) {
+				return resultSet.getString(columnNo); 
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	public void closeDBConnection() {

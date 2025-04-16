@@ -53,7 +53,7 @@ public class WebDriverUtility {
 		for(String window: allWindowIds)
 		{
 			driver.switchTo().window(window);
-			String actualUrl = driver.getCurrentUrl();
+			String actualUrl = driver.getCurrentUrl(); 
 			if(actualUrl.contains(partialUrl))
 				break;
 		}

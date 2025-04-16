@@ -56,7 +56,7 @@ public class BaseClass {
 	
 	@Parameters("browser")
 	@BeforeClass(alwaysRun = true)
-	public void launchBrowser(@Optional("chrome") String BROWSER) throws Exception
+	public void launchBrowser(@Optional("firefox") String BROWSER) throws Exception
 	{
 //		String value = System.getProperty("key");
 		if(BROWSER.equalsIgnoreCase("chrome"))

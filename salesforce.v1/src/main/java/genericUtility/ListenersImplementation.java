@@ -2,11 +2,14 @@ package genericUtility;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
+import org.testng.IInvokedMethod;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
+import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
@@ -16,7 +19,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ListenersImplementation implements ITestListener ,ISuiteListener{
+public class ListenersImplementation implements ITestListener ,ISuiteListener {
 	
 
 	ExtentTest test;
@@ -26,6 +29,7 @@ public class ListenersImplementation implements ITestListener ,ISuiteListener{
 	
 	@Override
 	public void onStart(ISuite suite) {
+			
 		System.out.println("Suite Level Report Configuration");
 		String time = new Date().toString().replace(" ", "_").replace(":", "_");
 		}

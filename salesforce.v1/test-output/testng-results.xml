@@ -1,161 +1,2386 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="113" passed="113" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[onStart method Execution Started]]>
-    </line>
-    <line>
-      <![CDATA[✅ testScriptRepo.Test_003.createContact_001 Test Started Successfully ]]>
-    </line>
-    <line>
-      <![CDATA[✅ Test Exceution Ended Successfully]]>
-    </line>
-    <line>
-      <![CDATA[✅ createContact_001 Test Executed Successfully ]]>
-    </line>
-    <line>
-      <![CDATA[✅ testScriptRepo.Test_003.createContact_001 Test Started Successfully ]]>
-    </line>
-    <line>
-      <![CDATA[✅ Test Exceution Ended Successfully]]>
-    </line>
-    <line>
-      <![CDATA[✅ createContact_001 Test Executed Successfully ]]>
-    </line>
-    <line>
-      <![CDATA[✅ testScriptRepo.Test_001.createCampaign_001 Test Started Successfully ]]>
-    </line>
-    <line>
-      <![CDATA[✅ createCampaign_001 Test Executed Successfully ]]>
-    </line>
   </reporter-output>
-  <suite started-at="2025-03-29T20:18:37 IST" name="Suite" finished-at="2025-03-29T20:20:06 IST" duration-ms="89327">
+  <suite started-at="2025-04-16T14:58:05 IST" name="Default suite" finished-at="2025-04-16T14:58:26 IST" duration-ms="20959">
     <groups>
-      <group name="Regression">
-        <method signature="Test_001.createCampaign_001()[pri:0, instance:testScriptRepo.Test_001@34a3d150]" name="createCampaign_001" class="testScriptRepo.Test_001"/>
-      </group> <!-- Regression -->
-      <group name="Smoke">
-        <method signature="Test_001.createCampaign_001()[pri:0, instance:testScriptRepo.Test_001@34a3d150]" name="createCampaign_001" class="testScriptRepo.Test_001"/>
-        <method signature="Test_003.createContact_001(java.util.HashMap)[pri:0, instance:testScriptRepo.Test_003@4c371370]" name="createContact_001" class="testScriptRepo.Test_003"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-03-29T20:18:37 IST" name="Test" finished-at="2025-03-29T20:20:06 IST" duration-ms="89327">
-      <class name="testScriptRepo.Test_001">
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:testScriptRepo.Test_001@34a3d150]" started-at="2025-03-29T20:19:30 IST" name="launchBrowser" finished-at="2025-03-29T20:19:38 IST" duration-ms="7372" status="PASS">
+    <test started-at="2025-04-16T14:58:05 IST" name="Default test" finished-at="2025-04-16T14:58:26 IST" duration-ms="20959">
+      <class name="sampleDataProvider.DataProviderClass">
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="38" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[Indira]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[indira.m@twsol.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[TWSOL]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="loginOperation()[pri:0, instance:testScriptRepo.Test_001@34a3d150]" started-at="2025-03-29T20:19:38 IST" name="loginOperation" finished-at="2025-03-29T20:19:39 IST" duration-ms="1162" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginOperation -->
-        <test-method signature="createCampaign_001()[pri:0, instance:testScriptRepo.Test_001@34a3d150]" started-at="2025-03-29T20:19:39 IST" name="createCampaign_001" finished-at="2025-03-29T20:19:45 IST" duration-ms="6277" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[✅ testScriptRepo.Test_001.createCampaign_001 Test Started Successfully ]]>
-            </line>
-            <line>
-              <![CDATA[✅ createCampaign_001 Test Executed Successfully ]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createCampaign_001 -->
-        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testScriptRepo.Test_001@34a3d150]" started-at="2025-03-29T20:19:45 IST" name="logoutOperation" finished-at="2025-03-29T20:20:03 IST" duration-ms="17773" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutOperation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScriptRepo.Test_001@34a3d150]" started-at="2025-03-29T20:20:03 IST" name="closeBrowser" finished-at="2025-03-29T20:20:06 IST" duration-ms="3065" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- testScriptRepo.Test_001 -->
-      <class name="testScriptRepo.Test_003">
-        <test-method is-config="true" signature="dbConnection()[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:18:35 IST" name="dbConnection" finished-at="2025-03-29T20:18:36 IST" duration-ms="1944" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dbConnection -->
-        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:18:37 IST" name="launchBrowser" finished-at="2025-03-29T20:18:43 IST" duration-ms="5797" status="PASS">
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[Dailneni]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dailneni@viaplus.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Viaplus]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="loginOperation()[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:18:43 IST" name="loginOperation" finished-at="2025-03-29T20:18:44 IST" duration-ms="1103" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginOperation -->
-        <test-method signature="createContact_001(java.util.HashMap)[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:18:44 IST" name="createContact_001" data-provider="provideCreateContactData" finished-at="2025-03-29T20:18:50 IST" duration-ms="5571" status="PASS">
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{mobile=9818425197_Data1, title=Title_Data1, org=QualiMe_YT_Data1, contactName=Sumit_Saurav_Data1}]]>
+                <![CDATA[Vikash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vikash.kumar@skillquotientgroup.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Skill Quotient]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[✅ testScriptRepo.Test_003.createContact_001 Test Started Successfully ]]>
-            </line>
-            <line>
-              <![CDATA[✅ Test Exceution Ended Successfully]]>
-            </line>
-            <line>
-              <![CDATA[✅ createContact_001 Test Executed Successfully ]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- createContact_001 -->
-        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:18:50 IST" name="logoutOperation" finished-at="2025-03-29T20:19:07 IST" duration-ms="16630" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutOperation -->
-        <test-method is-config="true" signature="loginOperation()[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:19:07 IST" name="loginOperation" finished-at="2025-03-29T20:19:08 IST" duration-ms="1064" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginOperation -->
-        <test-method signature="createContact_001(java.util.HashMap)[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:19:08 IST" name="createContact_001" data-provider="provideCreateContactData" finished-at="2025-03-29T20:19:13 IST" duration-ms="5455" status="PASS">
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{mobile=9818425197_Data2, title=Title_Data2, org=QualiMe__YT_Data2, contactName=Sumit_Saurav_Data2}]]>
+                <![CDATA[Madhumalini]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[madhumalini.mv@insemitech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[InSemiTech]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[✅ testScriptRepo.Test_003.createContact_001 Test Started Successfully ]]>
-            </line>
-            <line>
-              <![CDATA[✅ Test Exceution Ended Successfully]]>
-            </line>
-            <line>
-              <![CDATA[✅ createContact_001 Test Executed Successfully ]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- createContact_001 -->
-        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:19:13 IST" name="logoutOperation" finished-at="2025-03-29T20:19:29 IST" duration-ms="16060" status="PASS">
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Meenakshi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[meenakshi@9to6.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9to6]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutOperation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:19:29 IST" name="closeBrowser" finished-at="2025-03-29T20:19:30 IST" duration-ms="1011" status="PASS">
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sujatha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nadendla.sujatha1685@cientra.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Cientra]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeDatabaseConnection()[pri:0, instance:testScriptRepo.Test_003@4c371370]" started-at="2025-03-29T20:20:07 IST" name="closeDatabaseConnection" finished-at="2025-03-29T20:20:07 IST" duration-ms="8" status="PASS">
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Akash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[akash.kampu@lge.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LGE (LG Electronics)]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeDatabaseConnection -->
-      </class> <!-- testScriptRepo.Test_003 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shruti]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shruti.j@in.pradeepit.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pradeep IT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Asha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[asha.vh@element14.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Element14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vani]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vani_b@trigent.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Trigent Software]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Devendra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[devendra.sawant@xcela.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Xcela]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vasanth Mohan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vasanthmohan.s@ust.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[UST Global]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sowbiya Sulthana]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sowbiya.sulthana@obligeit.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Oblige IT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:25 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Akhila]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[akhila@prointegate.net]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pro Integrate]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:25 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Asha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[asha.b@vation.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Vation]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ankita]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ankita@teqfocus.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[TeqFocus]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[careers@mainaviglobal.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mainavi Global]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[recruitment@aintiram.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aintiram]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[careers@intech.org]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Intech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[careers@antino.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Antino Labs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[presales2@lcipl.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LCIPL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[gk@lcipl.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LCIPL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Smitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[smitha.cs@qualitrix.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Qualitrix]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sudha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sudha.rangavajhula@dpworld.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DP World]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Priya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[priya.bai@fidelisgroup.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Fidelis Group]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tripti]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tripti@magpie-international.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Magpie International]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[careers@innocito.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Innocito]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bhijit]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bhijit.lamb@ubique-systems.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ubique Systems]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[V Kumari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vkumari@primusglobal.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Primus Global]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chandra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chandra.sikdar@econcetms.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[EconcetMS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rutuja]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rutuja.jaybhaye@ampcustech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ampcus Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sapna]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sapna.rawat@ubique-systems.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ubique Systems]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vanitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vanitha.r@msysinc.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MSys Inc.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Meenakshi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[meenakshi.d@twsol.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[TWSOL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kavitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kavitha.p@doelsoft.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DoelSoft]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ramya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ramya@burgeonits.net]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Burgeon IT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hasmathulla]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hasmathulla@strsi.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[STRSI]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Deepika]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[deepika.panuganti@lancesoft.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LanceSoft]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Arunima]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[arunima.d@smartedgesolutions.co.uk]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SmartEdge Solutions]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Manikanta]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manikanta.amalapurapu@lancesoft.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LanceSoft]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sirisha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sirisha.bussa@nishtechnologies.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nish Technologies]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sai Silpa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[saisilpa.thota@srivango.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SriVango]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Janardhan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[janardhanb322@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hr@facctum.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Facctum]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hr-ind@tekdoors.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tekdoors]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Saheel]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[saheel.meeran@stmpl.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[STMP]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aaditya Rana]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aadityaranafrecruiter@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rajiv Raju]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rajiv.raju@placeelements.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Place Elements]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Yasaswini]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Yasaswini@CBittech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[CBitTech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hr@pazsoft.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[PazSoft]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bojamma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[bojamma@recruiseindia.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Recruise India]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lavanya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[lavanya.n@warpdrivetech.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[WarpDrive Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Manish]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mahtomanish564@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hr@techcushy.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[TechCushy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sri Sravika]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sri.sravika@artech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Artech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chaithanya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chaithanya@livecjobs.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LiveC Jobs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anistan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[anistan@liveconnection.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LiveConnection]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aishwarya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[aishwarya@beyondhiring.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Beyond Hiring]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shivani]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shivani.bhatt@sutherlandglobal.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sutherland Global]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kota]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kota.s@netconnectglobal.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[NetConnect Global]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vishnu Sai]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vishnusai@virtusa.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Virtusa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[India.careers@Ltts.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LTTS (L&T Technology Services)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SK]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sk19@rgbsi.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[RGBSI]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shwetalee]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shwetalee.hartalkar@ampcustech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ampcus Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="57" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shubhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shubhi.sharma@aloissolutions.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Alois Solutions]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Somesh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[somesh.r@sureminds.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SureMinds]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anitha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[k.anitha@renoirce.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Renoir Consulting]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Siva]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[siva.thokala@kodeva.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kodeva]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sharmistha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sharmistha.d@twsol.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[TWSOL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Darshana]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[darshana@isourceconsulting.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[iSource Consulting]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhay Pratap]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abhaypratap.singh@janitri.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Janitri Innovations]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Prajwala]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[prajwala.kumari@resolvetech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Resolve Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Riya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[riya.rajan@hrizen.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hrizen]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tripti]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tripti@spruceinfotech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Spruce InfoTech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lakshminarashimman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[lakshminarashimman.b@netconnectglobal.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[NetConnect Global]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bhavya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bhavya.Dewda@lancesoft.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LanceSoft]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ddeb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ddeb@jsanconsulting.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[JSAN Consulting]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sourya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sourya.maharana@sasken.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sasken]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[J Bhatia]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jbhatia@forcecraver.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Force Craver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NA]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hiring@nazztec.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nazztec]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jasbir]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Jasbir.thiara@ampcustech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ampcus Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bharanidharan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bharanidharan.k@wissen.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Wissen Technology]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Keerthana]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[keerthana.sn@intertecsys.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Intertec Systems]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Saurav]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[saurav.kumar@stratosphere.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Stratosphere IT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sushma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sushma.p@tachyontech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tachyon Technologies]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ashok]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ashoksnapfiner1@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ruby]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ruby@aliqan.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aliqan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RamyaSri]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ramyasri.ch@sapbottech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SAPBot Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kundana]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kundana@helius-tech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Helius Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shruti]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shruti.singh@gegnat.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Gegnat]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shraddha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Shraddha.sai@sivarsa.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sivarsa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shalini]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shalini.vennam@navasoftware.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nava Software]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="28" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Avinash]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[avinash.g@tataelxsi.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tata Elxsi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vandana]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vandana.h@ibridgetechsoft.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[iBridge TechSoft]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dimpu Deepthi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dimpu.deepthi@navasoftware.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nava Software]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Astitva]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[hr5.astitva@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Astitva HR Solutions]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shilpi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shilpi.s@anlage.co.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Anlage Infotech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Praveen]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[praveen@hexagonselect.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hexagon Select]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Harishkumar]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Harishkumar.a@infomericainc.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Infomerica]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dhanaraj]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dhanaraj@pan-asia.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pan Asia]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Suman]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[suman_r@trigent.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Trigent Software]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Farhan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[farhan.malik@qtsolv.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[QTSolv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Neelaveni]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Neelaveni.c@prachodayathglobal.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Prachodayath Global]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Prakriti]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Iprakriti.bidani@foundit.ai]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Foundit (previously Monster)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R. Sharma]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rsharma11541@altimetrik.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Altimetrik]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Apulla]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[apulla@radiants.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Radiants]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ashik]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ashik@spruceinfotech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Spruce InfoTech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Subhalatha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[subhalatha_p@trigent.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Trigent Software]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sayuktha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sayuktha@peoplegamut.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[PeopleGamut]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Shubhangi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shubhangi.sarode@acc.ltd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ACC Ltd.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Himani]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[himani.a@anaghatechnosoft.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Anagha Technosoft]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abdul]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abdul.g@stmtech.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[STM Tech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+        <test-method signature="getExcelDataFromDataProvider(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:sampleDataProvider.DataProviderClass@5fdcaa40]" started-at="2025-04-16T14:58:26 IST" name="getExcelDataFromDataProvider" data-provider="hrData" finished-at="2025-04-16T14:58:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sonakshi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sonakshi@conversejob.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Converse Job Solutions]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelDataFromDataProvider -->
+      </class> <!-- sampleDataProvider.DataProviderClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
